@@ -1,0 +1,21 @@
+.container {
+	display: flex;
+	flex-direction: row;
+	/* 必须指定宽度，否则会出现移动 */
+	/* width:120rpx;  */
+	padding: 10rpx;
+}
+
+.container text {
+	font-size: 24rpx;
+	color: #bbbbbb;
+	line-height: 24rpx;
+	position: relative;
+	bottom: 10rpx;
+	left: 6rpx;
+}
+
+.container image {
+	width: 32rpx;
+	height: 28rpx;
+}

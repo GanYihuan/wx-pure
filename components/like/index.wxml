@@ -1,0 +1,5 @@
+<!-- components/like/like-cmp.wxml -->
+<view class="container" bind:tap="onLike">
+  <image src="{{like?yes_url:no_url}}" />
+  <text>{{count}}</text>
+</view>

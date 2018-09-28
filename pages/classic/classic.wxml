@@ -1,0 +1,7 @@
+<view class='container'>
+  <view class='header'>
+    <view class="like-container">
+      <like-cmp bind:like="onLike" class="like" like="{{like}}" count="{{count}}" />
+    </view>
+  </view>
+</view>
