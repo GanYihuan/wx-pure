@@ -19,11 +19,23 @@
 
 ## 5-11 组件最好不要留有空白间距
 
+- **like/index.wxss**
+
 ```css
 .container text {
-/* 取消字体上下间距 */
-line-height: 24rpx;
-font-size: 24rpx;
-/* 取消字体上下间距 */
+  /* 取消字体上下间距 */
+  line-height: 24rpx;
+  font-size: 24rpx;
+  /* 取消字体上下间距 */
 }
+```
+
+## 5-12 固定宽度还是自适应？
+
+## 5-13 组件事件与事件处理
+
+> bind, catch(阻止冒泡)
+
+```html
+<view class="container" bind:tap="onLike">
 ```
