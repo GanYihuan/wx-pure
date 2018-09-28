@@ -1,10 +1,7 @@
-/**app.wxss**/
-.container {
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
-	padding: 200rpx 0;
-	box-sizing: border-box;
+/* @import 'style/weui.wxss'; */
+
+/* 组件会自动被 page 包裹  */
+page {
+	font-family: PingFangSC-Thin;
+	font-size: 16px;
 }
