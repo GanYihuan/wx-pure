@@ -7,12 +7,12 @@
 }
 
 .container text {
-	font-size: 24rpx;
-	color: #bbbbbb;
-	line-height: 24rpx;
 	position: relative;
 	bottom: 10rpx;
 	left: 6rpx;
+	line-height: 24rpx;
+	font-size: 24rpx;
+	color: #bbb;
 }
 
 .container image {
