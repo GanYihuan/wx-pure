@@ -39,3 +39,7 @@
 ```html
 <view class="container" bind:tap="onLike">
 ```
+
+## 6-2 数据绑定
+
+## 6-3 三元表达式与图片切换
