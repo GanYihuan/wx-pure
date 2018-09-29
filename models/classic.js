@@ -7,7 +7,7 @@ class ClassicModel extends HTTP {
 		super()
 	}
 	getLatest(sCallback) {
-    /* async */ 
+		/* async */
 		this.request({
 			url: 'classic/latest',
 			success: data => {

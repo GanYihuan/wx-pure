@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/classic/classic"
+    "pages/classic/classic",
+    "components/classic/movie/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",

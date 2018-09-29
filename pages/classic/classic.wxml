@@ -4,4 +4,5 @@
       <like-cmp class="like" like="{{classic.like_status}}" count="{{classic.fav_nums}}" bind:like="onLike" />
     </view>
   </view>
+  <movie-cmp wx:if="{{classic.type==100}}" img="{{classic.image}}" content="{{classic.content}}" />
 </view>
