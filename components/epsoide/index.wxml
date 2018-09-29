@@ -4,7 +4,7 @@
     <text class="index">{{_index}}</text>
     <view class="vertical-line"></view>
   </view>
-  <view class="date">
+  <view class="date-container">
     <text class="month">{{month}}</text>
     <text class="year">{{year}}</text>
   </view>

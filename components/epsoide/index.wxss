@@ -1,27 +1,26 @@
-/* components/epsoide/epsoide-cmp.wxss */
-.index {
-	font-size: 30px;
-	/* line-height:20px;  */
-	font-weight: 800;
-	margin-right: 7px;
-}
-
-.vertical-line {
-	margin-right: 7px;
-	height: 22px;
-	border-left: 1px solid black;
-}
-
-.plain {
-	font-size: 16px;
-}
 
 .container {
 	display: inline-flex;
 	flex-direction: row;
-	line-height: 30px;
-	/* justify-content: flex-end; */
-	/* align-items: baseline;       */
+	height: 60rpx;
+}
+
+.index {
+  margin-right: 14rpx;
+  line-height: 60rpx;
+	font-size: 60rpx;
+	font-weight: 800;
+}
+
+.vertical-line {
+  margin-right: 14rpx;
+  margin-bottom: 2rpx;
+	border-left: 1rpx solid black;
+	height: 44rpx;
+}
+
+.plain {
+	font-size: 32rpx;
 }
 
 .index-container {
@@ -30,24 +29,17 @@
 	align-items: baseline;
 }
 
-.date {
+.date-container {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	/* align-items: baseline; */
-	/* line-height:30px;   */
+  margin-top: 5rpx;
 }
 
 .month {
-	font-size: 12px;
-	line-height: 12px;
-	padding-bottom: 2px;
-	margin-right: 2rpx;
-	/* padding-right:4rpx; */
+  line-height: 24rpx;
+	font-size: 24rpx;
 }
 
 .year {
-	font-size: 10px;
-	line-height: 10px;
-	padding-bottom: 3px;
+	font-size: 20rpx;
 }
