@@ -1,10 +1,10 @@
 # imooc-pure
 
 > 纯正商业级应用-微信小程序开发实战
+> appkey
 
-- appkey
-  > RdshydjBvcYZhMZC
-  > GgRhTjUNUYn1fHke
+- RdshydjBvcYZhMZC
+- GgRhTjUNUYn1fHke
 
 ## 5-6 小程序尺寸单位与设计原则
 
