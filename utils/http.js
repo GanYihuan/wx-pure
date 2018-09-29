@@ -1,15 +1,19 @@
 import { config } from '../config.js'
 
+const tips = {
+	1: '出现一个错误!',
+	1005: 'appkey 无效',
+	3000: '期刊不存在'
+}
+
 class HTTP {
 	constructor() {
 		this.baseRestUrl = config.api_blink_url
 	}
-
-	//http 请求类, 当noRefech为true时，不做未授权重试机制
+	/* http 请求类, 当 noRefech 为 true 时，不做未授权重试机制 */
 	request(params) {
-		var that = this
-		var url = this.baseRestUrl + params.url
-
+		// let that = this
+		let url = this.baseRestUrl + params.url
 		if (!params.method) {
 			params.method = 'GET'
 		}
@@ -21,20 +25,42 @@ class HTTP {
 				'content-type': 'application/json',
 				appkey: config.appkey
 			},
-			success: function(res) {
-				// 判断以2（2xx)开头的状态码为正确
-				// 异常不要返回到回调中，就在request中处理，记录日志并showToast一个统一的错误即可
-				var code = res.statusCode.toString()
-				var startChar = code.charAt(0)
-				if (startChar == '2') {
+			success: res => {
+				/*
+        判断以2（2xx)开头的状态码为正确
+				异常不要返回到回调中，就在 request 中处理，记录日志并 showToast 一个统一的错误即可
+        */
+				let code = res.statusCode.toString()
+				if (code.startsWith('2')) {
 					params.success && params.success(res.data)
 				} else {
-					params.error && params.error(res)
+					// wx.showToast({
+					//   title: '出错了!',
+					//   icon: 'none',
+					//   duration: 2000
+					// })
+          params.error && params.error(res)
+          let error_code = res.data.error_code
+          this._show_error(error_code)
 				}
-			},
-			fail: function(err) {
-				params.fail && params.fail(err)
+      },
+      /* 没网络时才调用 */
+			fail: err => {
+        // wx.showToast({
+        //   title: '出错了!',
+        //   icon: 'none',
+        //   duration: 2000
+        // })
+        params.fail && params.fail(err)
+        this._show_error(1)
 			}
+		})
+	}
+	_show_error(error_code) {
+		wx.showToast({
+			title: tips[error_code],
+			icon: 'none',
+			duration: 2000
 		})
 	}
 }

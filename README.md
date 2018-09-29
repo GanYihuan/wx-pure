@@ -1,7 +1,6 @@
 # imooc-pure
 
-> 纯正商业级应用-微信小程序开发实战
-> appkey
+> 纯正商业级应用-微信小程序开发实战 appkey
 
 - RdshydjBvcYZhMZC
 - GgRhTjUNUYn1fHke
@@ -27,10 +26,10 @@
 
 ```css
 .container text {
-	/* 取消字体上下间距 */
-	line-height: 24rpx;
-	font-size: 24rpx;
-	/* 取消字体上下间距 */
+  /* 取消字体上下间距 */
+  line-height: 24rpx;
+  font-size: 24rpx;
+  /* 取消字体上下间距 */
 }
 ```
 
@@ -48,3 +47,7 @@
 ## 7-1 看待组件的两种观点
 
 ## 7-3 生命周期函数
+
+## 7-10 ES6 Module export 与 import
+
+## 7-15 通用错误异常处理

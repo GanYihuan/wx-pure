@@ -1,4 +1,6 @@
 // import { ClassicModel } from '../../models/classic.js'
+import { HTTP } from '../../utils/http'
+let http = new HTTP()
 
 Page({
 	/**
@@ -15,15 +17,20 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function(options) {
-		wx.request({
-			url: 'http://bl.7yue.pro/v1/classic/latest',
-			header: {
-        // appkey: 'KOLDaSADSDLWWbF'
-				// appkey: 'RdshydjBvcYZhMZC'
-				appkey: 'GgRhTjUNUYn1fHke'
-			},
-			success: (res) => {
-				console.log(this.data.count)
+		// wx.request({
+		// 	url: 'http://bl.7yue.pro/v1/classic/latest',
+		// 	header: {
+		// 		// appkey: 'RdshydjBvcYZhMZC'
+		// 		appkey: 'GgRhTjUNUYn1fHke'
+		// 	},
+		// 	success: (res) => {
+		// 		console.log(this.data.count)
+		// 	}
+		// })
+		http.request({
+			url: 'classic/latest',
+			success: res => {
+				console.log(res)
 			}
 		})
 	}
