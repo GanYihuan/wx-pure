@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/classic/classic",
-    "components/classic/movie/index"
+    "components/classic/movie/index",
+    "components/epsoide/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",
