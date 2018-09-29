@@ -41,8 +41,8 @@ class HTTP {
 					//   duration: 2000
 					// })
           params.error && params.error(res)
-          let error_code = res.data.error_code
-          this._show_error(error_code)
+          // let error_code = res.data.error_code
+          // this._show_error(error_code)
 				}
       },
       /* 没网络时才调用 */
@@ -53,7 +53,7 @@ class HTTP {
         //   duration: 2000
         // })
         params.fail && params.fail(err)
-        this._show_error(1)
+        // this._show_error(1)
 			}
 		})
 	}
