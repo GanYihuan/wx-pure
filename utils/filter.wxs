@@ -1,6 +1,5 @@
 var omit = function(text, length) {
 	// console.log('asfasdfadf')
-
 	if (!text) {
 		return ''
 	}

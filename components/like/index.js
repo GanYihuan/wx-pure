@@ -15,14 +15,17 @@ Component({
 			if (this.properties.readOnly) {
 				return
 			}
+			let like = this.properties.like
 			let count = this.properties.count
-      count = this.properties.like ? count - 1 : count + 1
-      /* 修改 data 里面的数据 */
+			count = like ? count - 1 : count + 1
+			/* 修改 data 里面的数据 */
 			this.setData({
 				count: count,
-				like: !this.properties.like
+				like: !like
 			})
-			let behavior = this.properties.like ? 'like' : 'cancel'
+			let behavior = like ? 'like' : 'cancel'
+      /* 自定义事件 */
+      /* behavior 设置 detail */
 			this.triggerEvent(
 				'like',
 				{

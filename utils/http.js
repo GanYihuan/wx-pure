@@ -32,6 +32,7 @@ class HTTP {
         */
 				let code = res.statusCode.toString()
 				if (code.startsWith('2')) {
+          /* params.success 是否为 null, 如果不是则执行后面代码 */
 					params.success && params.success(res.data)
 				} else {
 					// wx.showToast({

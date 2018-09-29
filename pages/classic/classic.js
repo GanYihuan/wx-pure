@@ -1,7 +1,9 @@
-import { ClassicModel } from '../../models/classic.js'
 // import { HTTP } from '../../utils/http'
 // let http = new HTTP()
+import { ClassicModel } from '../../models/classic.js'
 let classicModel = new ClassicModel()
+import { LikeModel } from '../../models/like.js'
+let likeModel = new LikeModel()
 
 Page({
 	/**
@@ -33,14 +35,19 @@ Page({
 		// 	success: res => {
 		// 		console.log(res)
 		// 	}
-    // })
-    /* 使用回调函数剥夺了 return 能力 */
+		// })
+		/* 使用回调函数剥夺了 return 能力 */
 		classicModel.getLatest(data => {
-      console.log(data)
-      /* 数据更新 */
+			console.log(data)
+			/* 数据更新 */
 			this.setData({
 				classic: data
 			})
 		})
+	},
+	onLike: function(event) {
+		console.log(event)
+		let behavior = event.detail.behavior
+		likeModel.like(behavior, this.data.classic.id, this.data.classic.type)
 	}
 })

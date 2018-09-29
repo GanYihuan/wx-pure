@@ -2,18 +2,18 @@
 	display: flex;
 	flex-direction: row;
 	/* 必须指定宽度，否则会出现移动 */
-	/* width: 120rpx;  */
+	width: 120rpx;
 	padding: 10rpx;
 }
 
 .container text {
 	position: relative;
 	bottom: 10rpx;
-  left: 6rpx;
-  /* 取消字体上下间距 */
+	left: 6rpx;
+	/* 取消字体上下间距 */
 	line-height: 24rpx;
-  font-size: 24rpx;
-  /* 取消字体上下间距 */
+	font-size: 24rpx;
+	/* 取消字体上下间距 */
 	color: #bbb;
 }
 
