@@ -13,8 +13,8 @@ Page({
 		classic: null,
 		first: false,
 		latest: true,
-		like: false,
-		count: 0
+		likeStatus: false,
+		likeCount: 0
 	},
 
 	/**
@@ -27,22 +27,26 @@ Page({
 		// 		// appkey: 'RdshydjBvcYZhMZC'
 		// 		appkey: 'GgRhTjUNUYn1fHke'
 		// 	},
-		// 	success: (res) => {
+		// 	success: (data) => {
 		// 		console.log(this.data.count)
 		// 	}
 		// })
 		// http.request({
 		// 	url: 'classic/latest',
-		// 	success: res => {
-		// 		console.log(res)
+		// 	success: data => {
+		// 		console.log(data)
 		// 	}
 		// })
 		/* 使用回调函数剥夺了 return 能力 */
 		classicModel.getLatest(data => {
-			console.log(data)
+			// console.log(data)
+			// this._getLikeStatus(data.id, data.type)
 			/* 数据更新 */
 			this.setData({
-				classic: data
+        // ...data
+				classic: data,
+				likeCount: data.fav_nums,
+				likeStatus: data.like_status
 			})
 		})
 		/*
@@ -68,6 +72,7 @@ Page({
 	_updateClassic: function(nextOrPrevious) {
 		let index = this.data.classic.index
 		classicModel.getClassic(index, nextOrPrevious, data => {
+			this._getLikeStatus(data.id, data.type)
 			this.setData({
 				classic: data,
 				latest: classicModel.isLatest(data.index),
@@ -76,11 +81,11 @@ Page({
 		})
 	},
 
-	_getLikeStatus: function(cid, type) {
-		likeModel.getClassicLikeStatus(cid, type, data => {
+	_getLikeStatus: function(artID, category) {
+		likeModel.getClassicLikeStatus(artID, category, data => {
 			this.setData({
-				like: data.like_status,
-				count: data.fav_nums
+				likeStatus: data.like_status,
+				likeCount: data.fav_nums
 			})
 		})
 	}

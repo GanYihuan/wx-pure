@@ -7,21 +7,28 @@
     <view class="like-container">
       <like-cmp
         class="like"
-        like="{{classic.like_status}}"
-        count="{{classic.fav_nums}}"
+        like="{{likeStatus}}"
+        count="{{likeCount}}"
         bind:like="onLike"
       />
     </view>
   </view>
   <movie-cmp
-    wx:if="{{classic.type==100}}"
+    wx:if="{{classic.type===100}}"
     img="{{classic.image}}"
     content="{{classic.content}}"
   />
   <essay-cmp
-    wx:if="{{classic.type==300}}"
+    wx:if="{{classic.type===300}}"
     img="{{classic.image}}"
     content="{{classic.content}}"
+  />
+  <music-cmp
+    wx:if="{{classic.type===200}}"
+    img="{{classic.image}}"
+    content="{{classic.content}}"
+    src="{{classic.url}}"
+    title="{{classic.title}}"
   />
   <navi-cmp
     class="navi"
