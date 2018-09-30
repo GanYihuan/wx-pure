@@ -1,5 +1,6 @@
 // pages/book/book.js
 import { BookModel } from '../../models/book.js'
+
 let bookModel = new BookModel()
 
 Page({
@@ -43,50 +44,27 @@ Page({
 		// 	}
 		// )
 
-		// bookModel.getHotList(data => {
-		// 	this.setData({
-		// 		books: data
-		// 	})
+		// const hotList = bookModel.getHotList()
+		// hotList.then(res => {
+		// 	console.log(res)
 		// })
 
-		const hotList = bookModel.getHotList()
-		hotList.then(res => {
-			console.log(res)
-		})
-	},
-
-	/**
-	 * Lifecycle function--Called when page is initially rendered
-	 */
-	onReady: function() {},
-
-	/**
-	 * Lifecycle function--Called when page show
-	 */
-	onShow: function() {},
-
-	/**
-	 * Lifecycle function--Called when page hide
-	 */
-	onHide: function() {},
-
-	/**
-	 * Lifecycle function--Called when page unload
-	 */
-	onUnload: function() {},
-
-	/**
-	 * Page event handler function--Called when user drop down
-	 */
-	onPullDownRefresh: function() {},
-
-	/**
-	 * Called when page reach bottom
-	 */
-	onReachBottom: function() {},
-
-	/**
-	 * Called when user click on the top right corner to share
-	 */
-	onShareAppMessage: function() {}
+		// bookModel
+		// 	.getHotList()
+		// 	.then(res => {
+		// 		console.log(res)
+		// 		// api2
+		// 		return bookModel.getMyBookCount()
+		// 	})
+		// 	.then(res => {
+		// 		// res -> api2
+    //     console.log(res)
+    //     // api3
+		// 		return bookModel.getMyBookCount()
+		// 	})
+		// 	.then(res => {
+    //     // res -> api3
+		// 		console.log(res)
+		// 	})
+	}
 })

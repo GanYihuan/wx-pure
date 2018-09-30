@@ -110,3 +110,5 @@
 ## 11-2 promise
 
 ## 11-3 http.js -> http-p.js
+
+## 11-4 promise 回调用法

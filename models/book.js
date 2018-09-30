@@ -6,7 +6,7 @@ class BookModel extends HTTP {
 		super()
 	}
 
-	getHotList(success) {
+	getHotList() {
 		/* http-p.js/request({}), 里面写了 {}, 导致能传递对象, (解构赋值) */
 		// return this.request({
 		// 	url: 'book/hot_list',
@@ -17,6 +17,12 @@ class BookModel extends HTTP {
 		// 	method: 'POST'
 		// })
 		return this.request({ url: 'book/hot_list' })
+	}
+
+	getMyBookCount() {
+		this.request({
+			url: '/book/favor/count'
+		})
 	}
 }
 
