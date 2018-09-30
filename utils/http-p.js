@@ -1,4 +1,4 @@
-import { config } from '../config.js'
+﻿import { config } from '../config.js'
 
 const tips = {
 	1: '出现一个错误!',
@@ -7,20 +7,18 @@ const tips = {
 }
 
 class HTTP {
-	constructor() {
-		this.baseRestUrl = config.api_blink_url
+	request({ url, data = {}, method = 'GET' }) {
+		return new Promise((resolve, reject) => {
+			this._request(url, resolve, reject, data, method)
+		})
 	}
+
 	/* http 请求类, 当 noRefech 为 true 时，不做未授权重试机制 */
-	request(params) {
-		// let that = this
-		let url = this.baseRestUrl + params.url
-		if (!params.method) {
-			params.method = 'GET'
-		}
+	_request(url, resolve, reject, data = {}, method = 'GET') {
 		wx.request({
-			url: url,
-			data: params.data,
-			method: params.method,
+			url: config.api_blink_url + url,
+			data: data,
+			method: method,
 			header: {
 				'content-type': 'application/json',
 				appkey: config.appkey
@@ -33,14 +31,14 @@ class HTTP {
 				const code = res.statusCode.toString()
 				if (code.startsWith('2')) {
 					/* params.success 是否为 null, 如果不是则执行后面代码 */
-					params.success && params.success(res.data)
+					resolve(res.data)
 				} else {
 					// wx.showToast({
 					//   title: '出错了!',
 					//   icon: 'none',
 					//   duration: 2000
 					// })
-					// params.error && params.error(res)
+					reject()
 					const error_code = res.data.error_code
 					this._show_error(error_code)
 				}
@@ -52,7 +50,7 @@ class HTTP {
 				//   icon: 'none',
 				//   duration: 2000
 				// })
-				// params.fail && params.fail(err)
+				reject()
 				this._show_error(1)
 			}
 		})
