@@ -13,50 +13,33 @@ class ClassicModel extends HTTP {
 		this.request({
 			url: 'classic/latest',
 			success: data => {
+				let key = this._fullKey(data.index)
+				wx.setStorageSync(key, data)
 				this._setLatestIndex(data.index)
 				sCallback(data)
 			}
 		})
 	}
 
-	// getPrevious(index, sCallback) {
-	// 	this._getClassic(index, 'previous', sCallback)
-	// }
-
-	// getNext(index, sCallback) {
-	// 	this._getClassic(index, 'next', sCallback)
-	// }
-
-	// _getClassic(index, next_or_previous, sCallback) {
-	// 	let key =
-	// 		next_or_previous === 'next'
-	// 			? this._fullKey(index + 1)
-	// 			: this._fullKey(index - 1)
-	// 	let classic = wx.getStorageSync(key)
-	// 	if (!classic) {
-	// 		let params = {
-	// 			url: 'classic/' + index + '/' + next_or_previous,
-	// 			success: data => {
-	// 				let key = this._fullKey(data.index)
-	// 				wx.setStorageSync(key, data)
-	// 				sCallback(data)
-	// 			}
-	// 		}
-	// 		this.request(params)
-	// 	} else {
-	// 		sCallback(classic)
-	// 	}
-	// }
-
 	getClassic(index, next_or_previous, sCallback) {
-		/* 缓存中寻找, 写入缓存中 */
-		/* 确定 key */
-		this.request({
-			url: 'classic/' + index + '/' + next_or_previous,
-			success: res => {
-				sCallback(res)
-			}
-		})
+		let key =
+			next_or_previous === 'next'
+				? this._fullKey(index + 1)
+				: this._fullKey(index - 1)
+		let classic = wx.getStorageSync(key)
+		if (!classic) {
+			this.request({
+				url: 'classic/' + index + '/' + next_or_previous,
+				success: data => {
+					/* 写入缓存 */
+					let key = this._fullKey(data.index)
+					wx.setStorageSync(key, data)
+					sCallback(data)
+				}
+			})
+		} else {
+			sCallback(classic)
+		}
 	}
 
 	isFirst(index) {
