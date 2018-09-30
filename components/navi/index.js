@@ -1,4 +1,4 @@
-// components/navi/navi.js
+// components/navi/index.js
 Component({
 	/**
 	 * 组件的属性列表
@@ -11,12 +11,7 @@ Component({
 		latest: {
 			type: Boolean,
 			value: false,
-			observer: function() {
-				// console.log('111111')
-				// this.setData({
-				//   latest:this.properties.latest
-				// })
-			}
+			observer: function() {}
 		},
 		first: {
 			type: Boolean,
@@ -30,7 +25,9 @@ Component({
 	 */
 	data: {
 		disLeftSrc: 'images/triangle.dis@left.png',
-		highLeftSrc: 'images/triangle@left.png'
+    highLeftSrc: 'images/triangle@left.png',
+    disRightSrc: 'images/triangle.dis@right.png',
+    highRightSrc: 'images/triangle@right.png'
 	},
 
 	/**
@@ -39,13 +36,11 @@ Component({
 	methods: {
 		onLeft: function() {
 			if (!this.properties.latest) {
-        /* 触发自定义事件 */
 				this.triggerEvent('left', {}, {})
 			}
 		},
 		onRight: function() {
 			if (!this.properties.first) {
-        /* 触发自定义事件 */
 				this.triggerEvent('right', {}, {})
 			}
 		}

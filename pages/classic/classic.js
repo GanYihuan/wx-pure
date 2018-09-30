@@ -11,11 +11,12 @@ Page({
 	 */
 	data: {
 		classic: null,
-		latest: true,
 		first: false,
+		latest: true,
 		like: false,
 		count: 0
 	},
+
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
@@ -44,10 +45,34 @@ Page({
 				classic: data
 			})
 		})
+		/*
+    onLoad: latestClassic lastestIndex
+    onPreviews: currentClassic currentIndex
+    */
 	},
+
 	onLike: function(event) {
 		console.log(event)
 		let behavior = event.detail.behavior
 		likeModel.like(behavior, this.data.classic.id, this.data.classic.type)
+	},
+
+	onPrevious: function(event) {
+		this._updateClassic('previous')
+	},
+
+	onNext: function(event) {
+		this._updateClassic('next')
+	},
+
+	_updateClassic: function(nextOrPrevious) {
+		let index = this.data.classic.index
+		classicModel.getClassic(index, nextOrPrevious, data => {
+			this.setData({
+				classic: data,
+				latest: classicModel.isLatest(data.index),
+				first: classicModel.isFirst(data.index)
+			})
+		})
 	}
 })

@@ -6,11 +6,11 @@
 }
 
 .tag {
-	width: 46rpx;
-	height: 142rpx;
 	position: relative;
 	bottom: 58rpx;
 	right: 310rpx;
+	width: 46rpx;
+	height: 142rpx;
 }
 
 .content {

@@ -18,11 +18,16 @@
     img="{{classic.image}}"
     content="{{classic.content}}"
   />
+  <essay-cmp
+    wx:if="{{classic.type==300}}"
+    img="{{classic.image}}"
+    content="{{classic.content}}"
+  />
   <navi-cmp
     class="navi"
     title="{{classic.title}}"
-    latest="{{latest}}"
     first="{{first}}"
+    latest="{{latest}}"
     catch:left="onNext"
     catch:right="onPrevious"
   />
