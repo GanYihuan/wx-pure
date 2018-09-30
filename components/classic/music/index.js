@@ -26,6 +26,17 @@ Component({
 		playingUrl: 'images/player@playing.png'
 	},
 
+	attached: function() {
+		this._recoverPlaying()
+		this._monitorSwitch()
+	},
+
+  /* hidden 不会触发完整生命周期, 频繁切换 */
+  /* wx:if 会触发完整生命周期, 不大可能改变 */
+	detached: function() {
+		// wx.pauseBackgroundAudio()
+	},
+
 	/**
 	 * 组件的方法列表
 	 */
@@ -47,6 +58,37 @@ Component({
 				})
 				mMgr.pause()
 			}
+		},
+
+		_recoverPlaying: function() {
+			if (mMgr.paused) {
+				this.setData({
+					playing: false
+				})
+				return
+			}
+			if (mMgr.src === this.properties.src) {
+				if (!mMgr.paused) {
+					this.setData({
+						playing: true
+					})
+				}
+			}
+		},
+
+		_monitorSwitch: function() {
+			mMgr.onPlay(() => {
+				this._recoverPlaying()
+			})
+			mMgr.onPause(() => {
+				this._recoverPlaying()
+			})
+			mMgr.onStop(() => {
+				this._recoverPlaying()
+			})
+			mMgr.onEnded(() => {
+				this._recoverPlaying()
+			})
 		}
 	}
 })
