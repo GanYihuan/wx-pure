@@ -1,0 +1,28 @@
+/* components/classic/essay/index.wxss */
+.classic-img {
+	width: 750rpx;
+	height: 500rpx;
+	/* margin-bottom:120rpx; */
+}
+
+.tag {
+	width: 46rpx;
+	height: 142rpx;
+	position: relative;
+	bottom: 58rpx;
+	right: 310rpx;
+}
+
+.content {
+	display: block;
+	/* width:275px; */
+	/* margin:0 auto; */
+	max-width: 550rpx;
+	font-size: 36rpx;
+}
+
+.classic-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}

@@ -79,3 +79,10 @@
 
 - **navi.js** 触发事件
 - **classic.wxml->navi-cmp** 监听事件
+
+## 9-4 music组件初步实现
+
+## 9-5, 9-6 初识组件的 behavior 行为
+
+- **classic-beh.js**
+- 子类覆盖父类属性, 生命周期不会覆盖
