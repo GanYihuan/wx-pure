@@ -42,9 +42,11 @@ Page({
 			console.log(data)
 			/* 数据更新 */
 			this.setData({
-				classic: data
+        ...data
+				// classic: data
 			})
-		})
+    })
+    console.log(this.data)
 		/*
     onLoad: latestClassic lastestIndex
     onPreviews: currentClassic currentIndex
@@ -54,7 +56,7 @@ Page({
 	onLike: function(event) {
 		console.log(event)
 		let behavior = event.detail.behavior
-		likeModel.like(behavior, this.data.classic.id, this.data.classic.type)
+		likeModel.like(behavior, this.data.id, this.data.type)
 	},
 
 	onPrevious: function(event) {
@@ -66,10 +68,10 @@ Page({
 	},
 
 	_updateClassic: function(nextOrPrevious) {
-		let index = this.data.classic.index
+		let index = this.data.index
 		classicModel.getClassic(index, nextOrPrevious, data => {
 			this.setData({
-				classic: data,
+				...data,
 				latest: classicModel.isLatest(data.index),
 				first: classicModel.isFirst(data.index)
 			})

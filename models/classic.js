@@ -29,7 +29,7 @@ class ClassicModel extends HTTP {
 		let classic = wx.getStorageSync(key)
 		if (!classic) {
 			this.request({
-				url: 'classic/' + index + '/' + next_or_previous,
+				url: `classic/${index}/${next_or_previous}`,
 				success: data => {
 					/* 写入缓存 */
 					let key = this._fullKey(data.index)
