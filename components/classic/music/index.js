@@ -31,8 +31,8 @@ Component({
 		this._monitorSwitch()
 	},
 
-  /* hidden 不会触发完整生命周期, 频繁切换 */
-  /* wx:if 会触发完整生命周期, 不大可能改变 */
+	/* hidden 不会触发完整生命周期, 频繁切换 */
+	/* wx:if 会触发完整生命周期, 不大可能改变 */
 	detached: function() {
 		// wx.pauseBackgroundAudio()
 	},
