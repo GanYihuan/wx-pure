@@ -1,22 +1,24 @@
 /* components/classic/music/index.wxss */
 .classic-img {
-	width: 422rpx;
-	height: 422rpx;
 	margin-top: 60rpx;
 	/* margin-bottom: 120rpx; */
-	border-radius: 70%;
 	/* margin-bottom: -50px; */
+	border-radius: 70%;
+	width: 422rpx;
+	height: 422rpx;
 	overflow: hidden;
 }
 
-/* @-webkit-keyframes rotation {
+/* 
+@-webkit-keyframes rotation {
 	from {
 		-webkit-transform: rotate(0deg);
 	}
 	to {
 		-webkit-transform: rotate(360deg);
 	}
-} */
+} 
+*/
 
 @keyframes rotation {
 	from {
@@ -28,11 +30,11 @@
 }
 
 .tag {
-	width: 44rpx;
-	height: 127rpx;
 	position: relative;
 	bottom: 160rpx;
 	right: 310rpx;
+	width: 44rpx;
+	height: 127rpx;
 }
 
 .rotation {
@@ -45,18 +47,19 @@
 }
 
 .player-img {
-	width: 120rpx;
-	height: 120rpx;
 	position: relative;
 	bottom: 271rpx;
+	width: 120rpx;
+	height: 120rpx;
 }
 
 .content {
 	display: block;
-	/* width:275px; */ /* margin:0 auto; */
+	margin-top: -90rpx;
+  /* margin:0 auto; */
+  /* width:275px; */ 
 	max-width: 550rpx;
 	font-size: 36rpx;
-	margin-top: -90rpx;
 }
 
 .classic-container {
