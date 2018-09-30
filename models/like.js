@@ -4,6 +4,7 @@ class LikeModel extends HTTP {
 	constructor() {
 		super()
 	}
+
 	like(behavior, artID, category) {
 		let url = behavior === 'like' ? 'like' : 'like/cancel'
 		this.request({
@@ -16,6 +17,13 @@ class LikeModel extends HTTP {
 			success: data => {
 				console.log(data)
 			}
+		})
+	}
+
+	getClassicLikeStatus(artID, category, success) {
+		this.request({
+			url: 'classic/' + category + '/' + artID + '/favor',
+			success: success
 		})
 	}
 }

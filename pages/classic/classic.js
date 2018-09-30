@@ -74,5 +74,14 @@ Page({
 				first: classicModel.isFirst(data.index)
 			})
 		})
+	},
+
+	_getLikeStatus: function(cid, type) {
+		likeModel.getClassicLikeStatus(cid, type, data => {
+			this.setData({
+				like: data.like_status,
+				count: data.fav_nums
+			})
+		})
 	}
 })
