@@ -19,19 +19,6 @@ class ClassicModel extends HTTP {
 		})
 	}
 
-	/**
-	 * 在缓存中存放最新一期的期数
-	 */
-	_setLatestIndex(index) {
-		let key = this._fullKey('latest-' + index)
-		wx.setStorageSync(key, index)
-	}
-
-	_fullKey(partKey) {
-		let key = this.prefix + '-' + partKey
-		return key
-	}
-
 	// getPrevious(index, sCallback) {
 	// 	this._getClassic(index, 'previous', sCallback)
 	// }
@@ -59,16 +46,18 @@ class ClassicModel extends HTTP {
 	// 	} else {
 	// 		sCallback(classic)
 	// 	}
-  // }
-  
-  getClassic(index, next_or_previous, sCallback) {
-    this.request({
-      url: 'classic/' + index + '/' + next_or_previous,
-      success: (res) => {
-        sCallback(res)
-      }    
-    })
-  }
+	// }
+
+	getClassic(index, next_or_previous, sCallback) {
+		/* 缓存中寻找, 写入缓存中 */
+		/* 确定 key */
+		this.request({
+			url: 'classic/' + index + '/' + next_or_previous,
+			success: res => {
+				sCallback(res)
+			}
+		})
+	}
 
 	isFirst(index) {
 		if (index == 1) {
@@ -84,6 +73,19 @@ class ClassicModel extends HTTP {
 				return true
 			}
 		} else return false
+	}
+
+	/**
+	 * 在缓存中存放最新一期的期数
+	 */
+	_setLatestIndex(index) {
+		let key = this._fullKey('latest-' + index)
+		wx.setStorageSync(key, index)
+	}
+
+	_fullKey(partKey) {
+		let key = this.prefix + '-' + partKey
+		return key
 	}
 }
 
