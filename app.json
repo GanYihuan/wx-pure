@@ -1,15 +1,16 @@
 {
-  "pages": [
-    "pages/classic/classic",
-    "components/classic/movie/index",
-    "components/epsoide/index"
-  ],
-  "window": {
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "旧岛小样",
-    "navigationBarTextStyle": "black",
-    "navigationStyle": "default",
-    "enablePullDownRefresh": false,
-    "backgroundColor": "#fff"
-  }
+	"pages": [
+		"pages/classic/classic",
+		"components/classic/movie/index",
+		"components/epsoide/index",
+		"components/navi/index"
+	],
+	"window": {
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "旧岛小样",
+		"navigationBarTextStyle": "black",
+		"navigationStyle": "default",
+		"enablePullDownRefresh": false,
+		"backgroundColor": "#fff"
+	}
 }

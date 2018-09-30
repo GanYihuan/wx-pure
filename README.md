@@ -24,7 +24,7 @@
 
 - **like/index.wxss**
 
-```css
+```style
 .container text {
   /* 取消字体上下间距 */
   line-height: 24rpx;
@@ -54,7 +54,7 @@
 
 ## 8-2 组件属性赋值与页面渲染流程解析
 
-## 8-4 movie组件的实现
+## 8-4 movie 组件的实现
 
 ## 8-6 自定义事件的激活与监听
 
@@ -67,6 +67,15 @@
 
 ## 8-10 业务逻辑到底写组件里还是页面里
 
-## 8-11 observer函数的应用
+## 8-11 observer 函数的应用
 
-## 8-13 千万不要在observer中修改自身属性
+## 8-13 千万不要在 observer 中修改自身属性
+
+## 9-1 navi 组件与移动端触碰区域讨论
+
+## 9-3 禁用事件的技巧
+
+> https 服务器
+
+- **navi.js** 触发事件
+- **classic.wxml->navi-cmp** 监听事件
