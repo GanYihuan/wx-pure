@@ -2,30 +2,30 @@
   <view class='header'>
     <epsoide-cmp
       class="epsoide"
-      index="{{index}}"
+      index="{{classic.index}}"
     />
     <view class="like-container">
       <like-cmp
         class="like"
-        like="{{like_status}}"
-        count="{{fav_nums}}"
+        like="{{classic.like_status}}"
+        count="{{classic.fav_nums}}"
         bind:like="onLike"
       />
     </view>
   </view>
   <movie-cmp
-    wx:if="{{type===100}}"
-    img="{{image}}"
-    content="{{content}}"
+    wx:if="{{classic.type==100}}"
+    img="{{classic.image}}"
+    content="{{classic.content}}"
   />
   <essay-cmp
-    wx:if="{{type===300}}"
-    img="{{image}}"
-    content="{{content}}"
+    wx:if="{{classic.type==300}}"
+    img="{{classic.image}}"
+    content="{{classic.content}}"
   />
   <navi-cmp
     class="navi"
-    title="{{title}}"
+    title="{{classic.title}}"
     first="{{first}}"
     latest="{{latest}}"
     catch:left="onNext"
