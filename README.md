@@ -111,6 +111,10 @@
 
 ## 11-3 http.js -> http-p.js
 
-## 11-4 promise 回调用法
+## 11-4 promise callback
 
 ## 12-1 book style
+
+## 12-2 cycle
+
+> cycle `wx:for` use `<block></block>`
