@@ -67,6 +67,13 @@ font-size: 24rpx;
 
 - [wx.request](https://developers.weixin.qq.com/miniprogram/dev/api/network/request/wx.request.html)
 
+## 7-5, 7-6, 7-7, 7-8, 7-9 访问API获取数据, 同步，异步与回调函数, ES6箭头函数与this指代
+
+- **classic.js**
+- detail -> 不校验合法域名(开发阶段)
+- 500 是服务器原因, 服务端才能改
+- **config.js**
+
 ## 7-10 ES6 Module export 与 import
 
 ## 7-15 通用错误异常处理
