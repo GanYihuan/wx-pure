@@ -33,13 +33,15 @@ Page({
     //    console.log(this.data.likeCount)
 		// 		console.log(this.res.count)
 		// 	}
-		// })
+    // })
+    
 		// http.request({
 		// 	url: 'classic/latest',
 		// 	success: data => {
 		// 		console.log(data)
 		// 	}
-		// })
+    // })
+    
 		/* 使用回调函数剥夺了 return 能力 */
 		classicModel.getLatest(data => {
 			// console.log(data)

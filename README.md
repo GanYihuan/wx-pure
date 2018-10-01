@@ -74,9 +74,14 @@ font-size: 24rpx;
 - 500 是服务器原因, 服务端才能改
 - **config.js**
 
-## 7-10 ES6 Module export 与 import
+## 7-10, 7-11, 7-12, 7-13 ES6 Module export 与 import, HTTP类的封装与ES6 startsWith
+
+- **util/http.js**
 
 ## 7-15 通用错误异常处理
+
+- **util/http.js**
+- [wx.showToast](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showToast.html)
 
 ## 8-2 组件属性赋值与页面渲染流程解析
 

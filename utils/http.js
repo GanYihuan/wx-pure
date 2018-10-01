@@ -12,7 +12,6 @@ class HTTP {
 	}
 	/* http 请求类, 当 noRefech 为 true 时，不做未授权重试机制 */
 	request(params) {
-		// let that = this
 		let url = this.baseRestUrl + params.url
 		if (!params.method) {
 			params.method = 'GET'
@@ -25,6 +24,7 @@ class HTTP {
 				'content-type': 'application/json',
 				appkey: config.appkey
 			},
+			/* success: 接收异步调用的结果 */
 			success: res => {
 				/*
         判断以2（2xx)开头的状态码为正确
@@ -35,6 +35,7 @@ class HTTP {
 					/* params.success 是否为 null, 如果不是则执行后面代码 */
 					params.success && params.success(res.data)
 				} else {
+          /* 服务异常 */
 					// wx.showToast({
 					//   title: '出错了!',
 					//   icon: 'none',
@@ -56,13 +57,14 @@ class HTTP {
 				this._show_error(1)
 			}
 		})
-	}
-
+  }
+  /* wechat 没有私有概念, 这里是一种写法 */
 	_show_error(error_code) {
 		if (!error_code) {
 			error_code = 1
 		}
-		const tip = tips[error_code]
+    const tip = tips[error_code]
+    // [wx.showToast](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showToast.html)
 		wx.showToast({
 			title: tip ? tip : tips[1],
 			icon: 'none',
