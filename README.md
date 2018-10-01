@@ -83,7 +83,9 @@ font-size: 24rpx;
 - **util/http.js**
 - [wx.showToast](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showToast.html)
 
-## 8-2 组件属性赋值与页面渲染流程解析
+## 8-1, 8-2, 8-3 ‘剥夺函数return的能力’, 组件属性赋值与页面渲染流程解析, setData
+
+- **models/classic.js**
 
 ## 8-4 movie 组件的实现
 

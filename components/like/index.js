@@ -1,9 +1,9 @@
 Component({
 	/* 组件的属性列表, 需要开放出来的数据 */
 	properties: {
-		like: Boolean,
-		count: Number,
-		readOnly: Boolean
+		like: { type: Boolean },
+		count: { type: Number },
+		readOnly: { type: Boolean }
 		// myProperty: {
 		//   // [properties](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/component.html)
 		// 	// 属性名

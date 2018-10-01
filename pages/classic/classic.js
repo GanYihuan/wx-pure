@@ -43,15 +43,15 @@ Page({
     // })
     
 		/* 使用回调函数剥夺了 return 能力 */
-		classicModel.getLatest(data => {
-			// console.log(data)
-			// this._getLikeStatus(data.id, data.type)
-			/* 数据更新 */
+		classicModel.getLatest(res => {
+			// console.log(res)
+			// this._getLikeStatus(res.id, res.type)
+			/* setData: 数据更新 */
 			this.setData({
-				// ...data
-				classic: data,
-				likeCount: data.fav_nums,
-				likeStatus: data.like_status
+				// ...res
+				classic: res,
+				likeCount: res.fav_nums,
+				likeStatus: res.like_status
 			})
 		})
 		/*

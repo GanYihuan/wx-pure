@@ -3,15 +3,14 @@
 
 class ClassicModel extends HTTP {
 	prefix = 'classic'
-
 	constructor() {
 		super()
 	}
-
 	getLatest(sCallback) {
-		/* async */
+		/* async, 不能 return 结果 */
 		this.request({
-			url: 'classic/latest',
+      url: 'classic/latest',
+      /* success: 接收异步调用的结果 */
 			success: data => {
 				let key = this._fullKey(data.index)
 				wx.setStorageSync(key, data)
@@ -20,7 +19,6 @@ class ClassicModel extends HTTP {
 			}
 		})
 	}
-
 	getClassic(index, next_or_previous, sCallback) {
 		let key =
 			next_or_previous === 'next'
@@ -41,13 +39,11 @@ class ClassicModel extends HTTP {
 			sCallback(classic)
 		}
 	}
-
 	isFirst(index) {
 		if (index == 1) {
 			return true
 		} else return false
 	}
-
 	isLatest(index) {
 		let key = this._fullKey('latest-' + index)
 		let latestIndex = wx.getStorageSync(key)
@@ -57,7 +53,6 @@ class ClassicModel extends HTTP {
 			}
 		} else return false
 	}
-
 	/**
 	 * 在缓存中存放最新一期的期数
 	 */
@@ -65,7 +60,6 @@ class ClassicModel extends HTTP {
 		let key = this._fullKey('latest-' + index)
 		wx.setStorageSync(key, index)
 	}
-
 	_fullKey(partKey) {
 		let key = this.prefix + '-' + partKey
 		return key
