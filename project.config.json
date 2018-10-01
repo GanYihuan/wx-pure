@@ -36,13 +36,19 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 1,
 			"list": [
 				{
 					"id": -1,
 					"name": "book-detail",
 					"pathName": "pages/book-detail/book-detail",
 					"query": "bid=7"
+				},
+				{
+					"id": -1,
+					"name": "classic",
+					"pathName": "pages/classic/classic",
+					"query": ""
 				}
 			]
 		}

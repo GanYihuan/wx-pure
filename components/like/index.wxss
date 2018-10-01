@@ -6,6 +6,11 @@
 	padding: 10rpx;
 }
 
+.container image {
+	width: 32rpx;
+	height: 28rpx;
+}
+
 .container text {
 	position: relative;
 	bottom: 10rpx;
@@ -15,9 +20,4 @@
 	font-size: 24rpx;
 	/* 取消字体上下间距 */
 	color: #bbb;
-}
-
-.container image {
-	width: 32rpx;
-	height: 28rpx;
 }

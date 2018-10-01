@@ -5,11 +5,16 @@
 - RdshydjBvcYZhMZC
 - GgRhTjUNUYn1fHke
 
+## 5-3 定义引用与使用组件
+
+- **classic.json**
+- **classic.wxml**
+
 ## 5-6 小程序尺寸单位与设计原则
 
-- iPhone6: dpi = 2, 750 X 1334 设计稿
+- iPhone6: dpi = 2, w:h = 750 X 1334 设计稿
 - 编辑器 10px = 模拟器 5px
-- rpx 比例 1:1, 不需要换算, rpx 会自适应，不适合用于字体
+- iPhone6: rpx 比例 1:1, 不需要换算, rpx 会自适应，字体可能会用到 px, px / 2
 
 ## 5-8 苹方字体设置
 
