@@ -20,28 +20,28 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function(options) {
-    /* wx.request: 异步 */
+		/* wx.request: 异步 */
 		// wx.request({
 		// 	url: 'http://bl.7yue.pro/v1/classic/latest',
 		// 	header: {
 		// 		// appkey: 'RdshydjBvcYZhMZC'
 		// 		appkey: 'GgRhTjUNUYn1fHke'
 		// 	},
-    //  /* success: 接收异步调用的结果 */
+		//  /* success: 接收异步调用的结果 */
 		// 	success: (res) => {
-    //    console.log(res)
-    //    console.log(this.data.likeCount)
+		//    console.log(res)
+		//    console.log(this.data.likeCount)
 		// 		console.log(this.res.count)
 		// 	}
-    // })
-    
+		// })
+
 		// http.request({
 		// 	url: 'classic/latest',
 		// 	success: data => {
 		// 		console.log(data)
 		// 	}
-    // })
-    
+		// })
+
 		/* 使用回调函数剥夺了 return 能力 */
 		classicModel.getLatest(res => {
 			// console.log(res)
