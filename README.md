@@ -53,13 +53,19 @@ font-size: 24rpx;
 - **like/index.js**
 - [properties](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/component.html)
 
-## 7-1, 7-2
+## 7-1, 7-2 API
 
 - 看待组件的两种观点
 - Blink API介绍与测试API
 - [API](https://github.com/fujiale33/old-land-flask-api/blob/master/README.md#HTTP%E7%8A%B6%E6%80%81%E7%A0%81)
 
 ## 7-3 生命周期函数
+
+- [生命周期函数](https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/page.html#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F)
+
+## 7-4 wx.request-4xx状态码并不会执行fail
+
+- [wx.request](https://developers.weixin.qq.com/miniprogram/dev/api/network/request/wx.request.html)
 
 ## 7-10 ES6 Module export 与 import
 
