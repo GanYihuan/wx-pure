@@ -23,7 +23,7 @@
 - [page](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/wxml-wxss.html)
 - 继承样式(font, color), 会从组件外继承到组件内
 
-## 5-11 组件最好不要留有空白间距
+## 5-11, 5-12 组件最好不要留有空白间距
 
 - **like/index.wxss**
 
@@ -33,8 +33,6 @@ line-height: 24rpx;
 font-size: 24rpx;
 /* 取消字体上下间距 */
 ```
-
-## 5-12 固定宽度还是自适应？
 
 ## 5-13 组件事件与事件处理
 
