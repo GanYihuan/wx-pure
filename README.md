@@ -118,9 +118,9 @@ font-size: 24rpx;
 - **classic-beh.js**
 - 子类覆盖父类属性, 生命周期不会覆盖
 
-## 9-7 9-8 是否是最新期刊的逻辑判断初步实现期刊切换
+## 9-7 9-8, 9-10 是否是最新期刊的逻辑判断初步实现期刊切换, 函数重构
 
-## 9-10 onNest 与函数重构技巧
+- **models/classic.js**
 
 ## 10-1 缓存
 
@@ -148,7 +148,7 @@ font-size: 24rpx;
 
 ## 12-2 cycle
 
-> cycle `wx:for` use `<block></block>`
+- cycle `wx:for` use `<block></block>`
 
 ## 12-3 book.wxml
 
