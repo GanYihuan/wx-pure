@@ -53,7 +53,11 @@ font-size: 24rpx;
 - **like/index.js**
 - [properties](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/component.html)
 
-## 7-1 看待组件的两种观点
+## 7-1, 7-2
+
+- 看待组件的两种观点
+- Blink API介绍与测试API
+- [API](https://github.com/fujiale33/old-land-flask-api/blob/master/README.md#HTTP%E7%8A%B6%E6%80%81%E7%A0%81)
 
 ## 7-3 生命周期函数
 
