@@ -13,8 +13,8 @@
 ## 5-6 小程序尺寸单位与设计原则
 
 - iPhone6: dpi = 2, w:h = 750 X 1334 设计稿
-- vscode 编辑器 5px = wechat 模拟器 10px
-- iPhone6: rpx 比例 1:1, 不需要换算, rpx 会自适应，字体可能会用到 px, px / 2
+- iPhone6: vscode 编辑器 5px = wechat 模拟器 10px
+- iPhone6: rpx 比例 1:1, 不需要换算, rpx 会自适应，字体可能会用到 px, flex 解决布局, rpx 解决响应式
 
 ## 5-8 苹方字体设置
 
