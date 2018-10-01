@@ -113,9 +113,7 @@ font-size: 24rpx;
 - **components/navi/index.js**
 - wechat 需要 https, 开发阶段可以用 http
 
-## 9-4 music 组件初步实现
-
-## 9-5, 9-6 初识组件的 behavior 行为
+## 9-4, 9-5, 9-6 初识组件的 behavior 行为
 
 - **classic-beh.js**
 - 子类覆盖父类属性, 生命周期不会覆盖
