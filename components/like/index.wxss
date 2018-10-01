@@ -12,6 +12,7 @@
 }
 
 .container text {
+  /* 偏移设置 */
 	position: relative;
 	bottom: 10rpx;
 	left: 6rpx;
