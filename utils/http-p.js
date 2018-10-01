@@ -12,7 +12,6 @@ class HTTP {
 			this._request(url, resolve, reject, data, method)
 		})
 	}
-
 	/* http 请求类, 当 noRefech 为 true 时，不做未授权重试机制 */
 	_request(url, resolve, reject, data = {}, method = 'GET') {
 		wx.request({
@@ -55,7 +54,6 @@ class HTTP {
 			}
 		})
 	}
-
 	_show_error(error_code) {
 		if (!error_code) {
 			error_code = 1

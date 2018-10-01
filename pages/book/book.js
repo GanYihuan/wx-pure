@@ -1,4 +1,3 @@
-// pages/book/book.js
 import { BookModel } from '../../models/book.js'
 
 let bookModel = new BookModel()
@@ -12,7 +11,6 @@ Page({
 		books: Object,
 		more: false
 	},
-
 	/**
 	 * Lifecycle function--Called when page load
 	 */

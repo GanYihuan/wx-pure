@@ -133,13 +133,14 @@ font-size: 24rpx;
 - wxss 复用 bug
 - **musicm** 音乐播放控件
 
-## 11-1 底部栏
+## 11
 
-## 11-2 promise
-
-## 11-3 http.js -> http-p.js
-
-## 11-4 promise callback
+- 底部栏
+- **pages/book.js**
+- promise
+- **http-p.js**
+- **models/book.js**
+- promise callback
 
 ## 12-1 book style
 
