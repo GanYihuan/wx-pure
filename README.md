@@ -48,7 +48,10 @@ font-size: 24rpx;
 - **like/index.js**
 - **like/index.wxml**
 
-## 6-4 组件的封闭性，开放性及粒度
+## 6-4, 6-5, 6-6 组件的封闭性，开放性及粒度, properties属性详解, this
+
+- **like/index.js**
+- [properties](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/component.html)
 
 ## 7-1 看待组件的两种观点
 
