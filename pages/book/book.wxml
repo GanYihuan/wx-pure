@@ -1,6 +1,6 @@
 <!-- pages/book/book.wxml -->
 <view>
-  <view wx:if="{{!searchPanel}}" class="container">
+  <view class="container" wx:if="{{!searchPanel}}">
     <view class="header">
       <view class='box' bind:tap="onActivateSearch">
         <image src="/images/icon/search.png" />
@@ -10,7 +10,7 @@
     <view class="sub-container">
       <image class="head-img" src="/images/book/quality.png" />
       <view class="books-container">
-        <block wx:for="{{books}}">
+        <block wx:for="{{books}}" wx:key="id">
           <book-cmp class="book" book="{{item}}" />
         </block>
       </view>
