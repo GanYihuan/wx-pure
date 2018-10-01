@@ -11,19 +11,19 @@ Component({
 	},
 	methods: {
 		onLike: function(event) {
-      // console.log(event)
+			// console.log(event)
 			if (this.properties.readOnly) {
 				return
 			}
 			let count = this.properties.count
 			count = this.properties.like ? count - 1 : count + 1
-			/* 修改 data 里面的数据 */
+			/* setData: 修改 data 里面的数据 */
 			this.setData({
 				count: count,
 				like: !this.properties.like
 			})
 			let behavior = this.properties.like ? 'like' : 'cancel'
-			/* 自定义事件 */
+			/* triggerEvent: 自定义事件 */
 			/* behavior 设置 detail */
 			this.triggerEvent(
 				'like',

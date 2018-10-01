@@ -43,7 +43,10 @@ font-size: 24rpx;
 - 非冒泡事件：当一个组件上的事件被触发后，该事件不会向父节点传递
 - [事件](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/event.html)
 
-## 6-3 三元表达式与图片切换
+## 6-1, 6-2, 6-3 三元表达式与图片切换
+
+- **like/index.js**
+- **like/index.wxml**
 
 ## 6-4 组件的封闭性，开放性及粒度
 
