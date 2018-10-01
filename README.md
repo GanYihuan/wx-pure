@@ -95,8 +95,13 @@ font-size: 24rpx;
 
 - **like/index.js** 自定义事件定义
 - **classic.wxml** 自定义事件监听
+- triggerEvent
 
 ## 8-7 喜欢还是不喜欢
+
+- **models/like.jsm**
+- **pages/classic.js**
+- **util/http.js**
 
 ## 8-8 组件的生命周期函数
 
