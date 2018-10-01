@@ -112,3 +112,5 @@
 ## 11-3 http.js -> http-p.js
 
 ## 11-4 promise 回调用法
+
+## 12-1 book style

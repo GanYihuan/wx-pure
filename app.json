@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/book/book",
     "pages/classic/classic",
-    "pages/my/my",
-    "pages/book/book"
+    "pages/my/my"
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",

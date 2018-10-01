@@ -11,7 +11,7 @@
       <image class="head-img" src="/images/book/quality.png" />
       <view class="books-container">
         <block wx:for="{{books}}">
-          <book-cmp book="{{item}}" class="book" />
+          <book-cmp class="book" book="{{item}}" />
         </block>
       </view>
     </view>

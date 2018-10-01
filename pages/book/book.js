@@ -58,13 +58,19 @@ Page({
 		// 	})
 		// 	.then(res => {
 		// 		// res -> api2
-    //     console.log(res)
-    //     // api3
+		//     console.log(res)
+		//     // api3
 		// 		return bookModel.getMyBookCount()
 		// 	})
 		// 	.then(res => {
-    //     // res -> api3
+		//     // res -> api3
 		// 		console.log(res)
 		// 	})
+
+		bookModel.getHotList().then(res => {
+			this.setData({
+				books: res
+			})
+		})
 	}
 })
