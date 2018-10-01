@@ -103,13 +103,10 @@ font-size: 24rpx;
 - **pages/classic.js**
 - **util/http.js**
 
-## 8-8 组件的生命周期函数
+## 8-8, 8-9, 8-10, 8-11, 8-12, 8-13, 8-14
 
-## 8-10 业务逻辑到底写组件里还是页面里
-
-## 8-11 observer 函数的应用
-
-## 8-13 千万不要在 observer 中修改自身属性
+- **components/epsoide/index.js**
+- 8-13: observer 函数的应用
 
 ## 9-1 navi 组件与移动端触碰区域讨论
 
