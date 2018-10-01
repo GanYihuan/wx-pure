@@ -26,6 +26,7 @@ Component({
 	 */
 	methods: {
 		onTap: function(event) {
+      const bid = this.properties.book.id
 			this.triggerEvent(
 				'booktap',
 				{
@@ -34,7 +35,7 @@ Component({
 				{}
 			)
 			wx.navigateTo({
-				url: '../../pages/detail/detail?bid=' + this.properties.book.id
+				url: `/pages/book-detail/book-detail?bid=${bid}`
 			})
 		}
 	}

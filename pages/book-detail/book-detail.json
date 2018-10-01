@@ -1,0 +1,5 @@
+{
+	"usingComponents": {
+		"tag-cmp": "/components/tag/index"
+	}
+}

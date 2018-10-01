@@ -1,8 +1,10 @@
 {
   "pages": [
     "pages/book/book",
+    "pages/book-detail/book-detail",
     "pages/classic/classic",
-    "pages/my/my"
+    "pages/my/my",
+    "components/tag/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",

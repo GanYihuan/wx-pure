@@ -120,3 +120,5 @@
 > cycle `wx:for` use `<block></block>`
 
 ## 12-3 book.wxml
+
+## 12-4 slot
