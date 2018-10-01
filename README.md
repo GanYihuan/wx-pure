@@ -108,14 +108,10 @@ font-size: 24rpx;
 - **components/epsoide/index.js**
 - 8-13: observer 函数的应用
 
-## 9-1 navi 组件与移动端触碰区域讨论
+## 9-1, 9-2, 9-3 navi 组件与移动端触碰区域讨论
 
-## 9-3 禁用事件的技巧
-
-> https 服务器
-
-- **navi.js** 触发事件
-- **classic.wxml->navi-cmp** 监听事件
+- **components/navi/index.js**
+- wechat 需要 https, 开发阶段可以用 http
 
 ## 9-4 music 组件初步实现
 

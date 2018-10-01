@@ -3,14 +3,14 @@
   <image 
     class="navi-icon navi-left"
     disable="{{!latest}}"
-    src="{{latest ? disLeftSrc : highLeftSrc}}"
+    src="{{latest?disLeftSrc:highLeftSrc}}"
     bind:tap="onLeft"
   />
   <text class="title">{{title}}</text>
   <image
     class="navi-icon navi-right"
     disable="{{!first}}"
-    src="{{first ? disRightSrc : highRightSrc}}"
+    src="{{first?disRightSrc:highRightSrc}}"
     bind:tap="onRight"
   />
 </view>
