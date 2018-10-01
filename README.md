@@ -37,7 +37,11 @@ font-size: 24rpx;
 ## 5-13 组件事件与事件处理
 
 - **like/index.wxml**
-  > bind, catch(阻止冒泡)
+- `bind:tap="onLike"`
+- `catch`(阻止冒泡)
+- 冒泡事件：当一个组件上的事件被触发后，该事件会向父节点传递
+- 非冒泡事件：当一个组件上的事件被触发后，该事件不会向父节点传递
+- [事件](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/event.html)
 
 ## 6-3 三元表达式与图片切换
 

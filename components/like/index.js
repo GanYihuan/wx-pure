@@ -1,4 +1,3 @@
-// components/like/like-cmp.js
 Component({
 	/* 组件的属性列表, 需要开放出来的数据 */
 	properties: {
@@ -12,6 +11,7 @@ Component({
 	},
 	methods: {
 		onLike: function(event) {
+      // console.log(event)
 			if (this.properties.readOnly) {
 				return
 			}
