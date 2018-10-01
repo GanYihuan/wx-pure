@@ -5,7 +5,7 @@
 - RdshydjBvcYZhMZC
 - GgRhTjUNUYn1fHke
 
-## 5-3 定义引用与使用组件
+## 5-1, 5-2, 5-3 定义引用与使用组件
 
 - **classic.json**
 - **classic.wxml**
@@ -16,26 +16,22 @@
 - iPhone6: vscode 编辑器 5px = wechat 模拟器 10px
 - iPhone6: rpx 比例 1:1, 不需要换算, rpx 会自适应，字体可能会用到 px, flex 解决布局, rpx 解决响应式
 
-## 5-8 苹方字体设置
+## 5-7, 5-8, 5-9, 5-10 苹方字体设置
 
-- **app.wxss**
-
-## 5-9 page 样式的巧妙应用
-
+- **app.wxss** ios,mac 上启用
+- page 会包裹组件
 - [page](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/wxml-wxss.html)
-- 继承样式，如 font 、 color ，会从组件外继承到组件内。
+- 继承样式(font, color), 会从组件外继承到组件内
 
 ## 5-11 组件最好不要留有空白间距
 
 - **like/index.wxss**
 
-```style
-.container text {
-  /* 取消字体上下间距 */
-  line-height: 24rpx;
-  font-size: 24rpx;
-  /* 取消字体上下间距 */
-}
+```css
+/* 取消字体上下间距 */
+line-height: 24rpx;
+font-size: 24rpx;
+/* 取消字体上下间距 */
 ```
 
 ## 5-12 固定宽度还是自适应？
@@ -85,7 +81,7 @@
 - **navi.js** 触发事件
 - **classic.wxml->navi-cmp** 监听事件
 
-## 9-4 music组件初步实现
+## 9-4 music 组件初步实现
 
 ## 9-5, 9-6 初识组件的 behavior 行为
 

@@ -1,5 +1,3 @@
-/* @import 'style/weui.wxss'; */
-
 /* 组件会自动被 page 包裹  */
 page {
 	font-family: PingFangSC-Thin;

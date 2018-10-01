@@ -1,5 +1,5 @@
-<view class='container'>
-  <view class='header'>
+<view class="container">
+  <view class="header">
     <epsoide-cmp
       class="epsoide"
       index="{{classic.index}}"
