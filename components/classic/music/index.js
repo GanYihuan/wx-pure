@@ -1,4 +1,3 @@
-// components/classic/music/index.js
 import { classicBehavior } from '../classic-beh.js'
 
 let mMgr = wx.getBackgroundAudioManager()
@@ -8,7 +7,6 @@ Component({
 	 * 组件的属性列表
 	 */
 	behaviors: [classicBehavior],
-
 	/**
 	 * 外部属性
 	 */
@@ -16,7 +14,6 @@ Component({
 		src: String,
 		title: String
 	},
-
 	/**
 	 * 组件的初始数据
 	 */
@@ -25,18 +22,15 @@ Component({
 		waittingUrl: 'images/player@waitting.png',
 		playingUrl: 'images/player@playing.png'
 	},
-
 	attached: function() {
 		this._recoverPlaying()
 		this._monitorSwitch()
 	},
-
 	/* hidden 不会触发完整生命周期, 频繁切换 */
 	/* wx:if 会触发完整生命周期, 不大可能改变 */
 	detached: function() {
 		// wx.pauseBackgroundAudio()
 	},
-
 	/**
 	 * 组件的方法列表
 	 */
@@ -45,7 +39,8 @@ Component({
 			if (!this.data.playing) {
 				this.setData({
 					playing: true
-				})
+        })
+        /* 有歌曲的前提下 */
 				if (mMgr.src === this.properties.src) {
 					mMgr.play()
 				} else {
@@ -59,7 +54,6 @@ Component({
 				mMgr.pause()
 			}
 		},
-
 		_recoverPlaying: function() {
 			if (mMgr.paused) {
 				this.setData({
@@ -75,7 +69,6 @@ Component({
 				}
 			}
 		},
-
 		_monitorSwitch: function() {
 			mMgr.onPlay(() => {
 				this._recoverPlaying()

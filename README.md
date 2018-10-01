@@ -124,18 +124,13 @@ font-size: 24rpx;
 - 缓存处理
 - wechat 清缓存
 
-## 10-1 缓存
+## 10
 
-## 10-2 收藏
-
-## 10-3 es6 改写 classic
-
-## 10-4 wxss 复用
-
-- bug
-
-## 10-5 音乐播放控件
-
+- 缓存
+- 收藏 **models/like.js**
+- es6 改写 classic
+- wx:if, hidden 区别
+- wxss 复用 bug
 - **musicm** 音乐播放控件
 
 ## 11-1 底部栏
