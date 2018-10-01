@@ -1,4 +1,3 @@
-<!-- components/book/index.wxml -->
 <view class="container" bind:tap="onTap">
   <image src="{{book.image||book.img}}"></image>
   <view class="description">

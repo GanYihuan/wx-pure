@@ -1,4 +1,3 @@
-<!-- pages/book/book.wxml -->
 <view>
   <view class="container" wx:if="{{!searchPanel}}">
     <view class="header">

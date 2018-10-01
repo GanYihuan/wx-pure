@@ -1,4 +1,3 @@
-<!-- pages/book-detail/book-detail.wxml -->
 <view class="container">
   <view class="head">
     <image src="{{book.image}}"></image>

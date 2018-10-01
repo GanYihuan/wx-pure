@@ -1,5 +1,3 @@
-// components/book/index.js
-
 Component({
 	/**
 	 * 组件的属性列表
@@ -11,7 +9,6 @@ Component({
 			value: true
 		}
 	},
-
 	/**
 	 * 组件的初始数据
 	 */
@@ -20,13 +17,12 @@ Component({
 		author: String,
 		img: String
 	},
-
 	/**
 	 * 组件的方法列表
 	 */
 	methods: {
 		onTap: function(event) {
-      const bid = this.properties.book.id
+			const bid = this.properties.book.id
 			this.triggerEvent(
 				'booktap',
 				{

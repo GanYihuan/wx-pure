@@ -48,7 +48,7 @@ font-size: 24rpx;
 - **like/index.js**
 - **like/index.wxml**
 
-## 6-4, 6-5, 6-6 组件的封闭性，开放性及粒度, properties属性详解, this
+## 6-4, 6-5, 6-6 组件的封闭性，开放性及粒度, properties 属性详解, this
 
 - **like/index.js**
 - [properties](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/component.html)
@@ -56,25 +56,25 @@ font-size: 24rpx;
 ## 7-1, 7-2 API
 
 - 看待组件的两种观点
-- Blink API介绍与测试API
+- Blink API 介绍与测试 API
 - [API](https://github.com/fujiale33/old-land-flask-api/blob/master/README.md#HTTP%E7%8A%B6%E6%80%81%E7%A0%81)
 
 ## 7-3 生命周期函数
 
 - [生命周期函数](https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/page.html#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F)
 
-## 7-4 wx.request-4xx状态码并不会执行fail
+## 7-4 wx.request-4xx 状态码并不会执行 fail
 
 - [wx.request](https://developers.weixin.qq.com/miniprogram/dev/api/network/request/wx.request.html)
 
-## 7-5, 7-6, 7-7, 7-8, 7-9 访问API获取数据, 同步，异步与回调函数, ES6箭头函数与this指代
+## 7-5, 7-6, 7-7, 7-8, 7-9 访问 API 获取数据, 同步，异步与回调函数, ES6 箭头函数与 this 指代
 
 - **classic.js**
 - detail -> 不校验合法域名(开发阶段)
 - 500 是服务器原因, 服务端才能改
 - **config.js**
 
-## 7-10, 7-11, 7-12, 7-13 ES6 Module export 与 import, HTTP类的封装与ES6 startsWith
+## 7-10, 7-11, 7-12, 7-13 ES6 Module export 与 import, HTTP 类的封装与 ES6 startsWith
 
 - **util/http.js**
 
@@ -83,7 +83,7 @@ font-size: 24rpx;
 - **util/http.js**
 - [wx.showToast](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showToast.html)
 
-## 8-1, 8-2, 8-3 ‘剥夺函数return的能力’, 组件属性赋值与页面渲染流程解析, setData
+## 8-1, 8-2, 8-3 ‘剥夺函数 return 的能力’, 组件属性赋值与页面渲染流程解析, setData
 
 - **models/classic.js**
 
@@ -142,12 +142,10 @@ font-size: 24rpx;
 - **models/book.js**
 - promise callback
 
-## 12-1 book style
+## 12
 
-## 12-2 cycle
-
-- cycle `wx:for` use `<block></block>`
-
-## 12-3 book.wxml
-
-## 12-4 slot
+- 真正宽度, 偏移实现 **components/book.wxss**
+- cycle `wx:for` use `<block></block>` **pages/book.wxml**
+- pages 组件传入的参数在 options 中 **book-detail.js**
+- wechat 固定开发页面-自定义编译条件
+- slot **tag.wxml** **tag.js**

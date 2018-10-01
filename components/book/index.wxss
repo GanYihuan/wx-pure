@@ -1,8 +1,7 @@
-/* components/book/index.wxss */
 .container {
 	display: flex;
-  flex-direction: column;
-  /* 使其不为 static */
+	flex-direction: column;
+	/* 使其不为 static */
 	position: relative;
 	margin-top: 30rpx;
 	/* padding: 0 90rpx 0 90rpx; */
@@ -19,19 +18,19 @@
 
 .description {
 	display: flex;
-  flex-direction: column;
-  /* 覆盖 位置重叠 */
-  /* 参照元素为 relative 的元素, 不参考 static */
+	flex-direction: column;
+	/* 覆盖 位置重叠 */
+	/* 参照元素为 relative 的元素, 不参考 static */
 	position: absolute;
 	bottom: 0;
 	padding: 5rpx 10rpx 8rpx 15rpx;
 	border-bottom-right-radius: 4rpx;
 	border-bottom-left-radius: 4rpx;
 	/* height: 100rpx; */
-  /* 真正宽度要加上 panding border */
-  /* 240rpx - 10prx - 15rpx = 215rpx, 不取奇数, 216rpx */
+	/* 真正宽度要加上 panding border */
+	/* 240rpx - 10prx - 15rpx = 215rpx, 不取奇数, 216rpx */
 	/* width: 100%; */
-  width: 216rpx;
+	width: 216rpx;
 	font-size: 24rpx;
 	background-color: #fff;
 }
