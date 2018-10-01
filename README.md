@@ -87,11 +87,13 @@ font-size: 24rpx;
 
 - **models/classic.js**
 
-## 8-4 movie 组件的实现
+## 8-4, 8-5 movie 组件的实现
+
+- behavior
 
 ## 8-6 自定义事件的激活与监听
 
-- **lkie/index.js** 自定义事件定义
+- **like/index.js** 自定义事件定义
 - **classic.wxml** 自定义事件监听
 
 ## 8-7 喜欢还是不喜欢

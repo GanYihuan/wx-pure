@@ -1,5 +1,10 @@
+.classic-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .classic-img {
-	/* margin-bottom: 120rpx; */
 	width: 750rpx;
 	height: 500rpx;
 }
@@ -14,14 +19,6 @@
 
 .content {
 	display: block;
-	/* margin: 0 auto; */
 	max-width: 550rpx;
-	/* width: 275px; */
 	font-size: 36rpx;
-}
-
-.classic-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 }

@@ -1,4 +1,3 @@
-// components/classic/movie/index.js
 import { classicBehavior } from '../classic-beh.js'
 
 Component({
