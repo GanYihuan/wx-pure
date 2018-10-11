@@ -24,12 +24,13 @@ class HTTP {
 				'content-type': 'application/json',
 				appkey: config.appkey
 			},
-			/* success: 接收异步调用的结果 */
+			/* success: 接收异步调用的结果 res */
 			success: res => {
 				/*
         判断以2（2xx)开头的状态码为正确
 				异常不要返回到回调中，就在 request 中处理，记录日志并 showToast 一个统一的错误即可
         */
+        // console.log(res)
 				const code = res.statusCode.toString()
 				if (code.startsWith('2')) {
 					/* params.success 是否为 null, 如果不是则执行后面代码 */
@@ -46,7 +47,7 @@ class HTTP {
 					this._show_error(error_code)
 				}
 			},
-			/* 没网络时才调用 */
+			/* 没网络时才调用, 4xx 不会调用 */
 			fail: err => {
 				// wx.showToast({
 				//   title: '出错了!',

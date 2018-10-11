@@ -1,8 +1,10 @@
 // import { HTTP } from '../../utils/http'
-// let http = new HTTP()
 import { ClassicModel } from '../../models/classic.js'
-let classicModel = new ClassicModel()
 import { LikeModel } from '../../models/like.js'
+
+/* 实例化对象 */
+// let http = new HTTP()
+let classicModel = new ClassicModel()
 let likeModel = new LikeModel()
 
 Page({

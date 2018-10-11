@@ -77,6 +77,8 @@ font-size: 24rpx;
 ## 7-10, 7-11, 7-12, 7-13 ES6 Module export 与 import, HTTP 类的封装与 ES6 startsWith
 
 - **util/http.js**
+- 状态码: `const code = res.statusCode.toString()`
+- ES6: `code.startsWith('2')`
 
 ## 7-15 通用错误异常处理
 
