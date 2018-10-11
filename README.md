@@ -101,7 +101,7 @@ font-size: 24rpx;
 
 ## 8-4, 8-5 movie 组件的实现
 
-- behavior
+- **component/movie/index.js** behaviors
 
 ## 8-6 自定义事件的激活与监听
 
