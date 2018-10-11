@@ -105,9 +105,9 @@ font-size: 24rpx;
 
 ## 8-6 自定义事件的激活与监听
 
-- **like/index.js** 自定义事件定义
-- **classic.wxml** 自定义事件监听
-- triggerEvent
+- **like/index.js** `this.triggerEvent()` 自定义事件触发
+- **classic.wxml** `bind:like="onLike"` 自定义事件监听
+- **classic.js** `event.detail.behavior` 获取事件传递的参数
 
 ## 8-7 喜欢还是不喜欢
 
