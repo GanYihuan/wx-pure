@@ -69,10 +69,10 @@ font-size: 24rpx;
 
 ## 7-5, 7-6, 7-7, 7-8, 7-9 访问 API 获取数据, 同步，异步与回调函数, ES6 箭头函数与 this 指代
 
-- **classic.js**
-- detail -> 不校验合法域名(开发阶段)
-- 500 是服务器原因, 服务端才能改
 - **config.js**
+- **classic.js**
+- 微信开发工具 -> detail -> 不校验合法域名勾上(开发阶段)
+- 500 是服务器原因, 服务端才能改
 
 ## 7-10, 7-11, 7-12, 7-13 ES6 Module export 与 import, HTTP 类的封装与 ES6 startsWith
 

@@ -20,14 +20,14 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function(options) {
-		/* wx.request: 异步 */
+		/* wx.request: 异步请求 */
 		// wx.request({
 		// 	url: 'http://bl.7yue.pro/v1/classic/latest',
 		// 	header: {
 		// 		// appkey: 'RdshydjBvcYZhMZC'
 		// 		appkey: 'GgRhTjUNUYn1fHke'
 		// 	},
-		//  /* success: 接收异步调用的结果 */
+		//  /* success: 接收异步调用的结果 res */
 		// 	success: (res) => {
 		//    console.log(res)
 		//    console.log(this.data.likeCount)
