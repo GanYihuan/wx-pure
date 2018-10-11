@@ -5,10 +5,10 @@
 - RdshydjBvcYZhMZC
 - GgRhTjUNUYn1fHke
 
-## 5-1, 5-2, 5-3 定义引用与使用组件
+## 5-3 定义引用与使用组件
 
-- **classic.json**
-- **classic.wxml**
+- **classic.json** 引用组件
+- **classic.wxml** 使用组件
 
 ## 5-6 小程序尺寸单位与设计原则
 
@@ -19,7 +19,7 @@
 ## 5-7, 5-8, 5-9, 5-10 苹方字体设置
 
 - **app.wxss** ios,mac 上启用
-- page 会包裹组件
+- page 会包裹组件, 每个页面都会自动加 page
 - [page](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/wxml-wxss.html)
 - 继承样式(font, color), 会从组件外继承到组件内
 
