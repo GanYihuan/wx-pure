@@ -111,9 +111,8 @@ font-size: 24rpx;
 
 ## 8-7 喜欢还是不喜欢
 
-- **models/like.jsm**
+- **models/like.js** 传递 like 状态到服务器
 - **pages/classic.js**
-- **util/http.js**
 
 ## 8-8, 8-9, 8-10, 8-11, 8-12, 8-13, 8-14
 
