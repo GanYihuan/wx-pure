@@ -5,9 +5,11 @@ let likeBehavior = Behavior({
 		like: Boolean,
 		count: Number
 	},
-	data: {
-		yes_url: '../images/like.png',
-		no_url: '../images/like@dis.png'
+	data() {
+		return {
+			yes_url: '../images/like.png',
+			no_url: '../images/like@dis.png'
+		}
 	},
 	attached: function() {},
 	methods: {
