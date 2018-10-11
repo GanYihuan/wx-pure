@@ -114,10 +114,14 @@ font-size: 24rpx;
 - **models/like.js** 传递 like 状态到服务器
 - **pages/classic.js**
 
-## 8-8, 8-9, 8-10, 8-11, 8-12, 8-13, 8-14
+## 8-8, 8-10 组件的生命周期函数
 
 - **components/epsoide/index.js**
-- 8-13: observer 函数的应用
+- 组件生命周期函数 `ready()`
+
+## 8-11: observer 函数的应用
+
+- 数字补零
 
 ## 9-1, 9-2, 9-3 navi 组件与移动端触碰区域讨论
 

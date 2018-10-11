@@ -39,8 +39,13 @@ Component({
 		year: Number,
 		month: String,
 		_index: String
-	},
+  },
+  /*
+  组件生命周期函数, 组件布局完成后执行
+  */
 	ready: function() {
+    // console.log(this.properties)
+    // console.log(this.data)
 		let date = new Date()
 		let month = date.getMonth()
 		let year = date.getFullYear()
