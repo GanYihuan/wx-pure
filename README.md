@@ -83,7 +83,8 @@ font-size: 24rpx;
 ## 7-15 通用错误异常处理
 
 - **util/http.js**
-- [wx.showToast](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showToast.html)
+- `wx.showToast()`
+- `const error_code = res.data.error_code`
 
 ## 8-1, 8-2, 8-3 ‘剥夺函数 return 的能力’, 组件属性赋值与页面渲染流程解析, setData
 
