@@ -7,7 +7,7 @@ class ClassicModel extends HTTP {
 		super()
 	}
 	getLatest(sCallback) {
-		/* async, 不能 return 结果 */
+		/* this.request() 是 async, 不能 return 结果 */
 		this.request({
 			url: 'classic/latest',
 			/* success: 接收异步调用的结果 */
@@ -15,7 +15,8 @@ class ClassicModel extends HTTP {
 				let key = this._fullKey(res.index)
         wx.setStorageSync(key, res)
         /* 最新一期的期数 index 写入缓存 */
-				this._setLatestIndex(res.index)
+        this._setLatestIndex(res.index)
+        /* 回传回去 */
 				sCallback(res)
 			}
 		})

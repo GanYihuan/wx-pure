@@ -37,6 +37,7 @@ font-size: 24rpx;
 ## 5-13 组件事件与事件处理
 
 - **like/index.wxml**
+- `this.setData()` 修改 data 里面的数据
 - `bind:tap="onLike"`
 - `catch`(阻止冒泡)
 - 冒泡事件：当一个组件上的事件被触发后，该事件会向父节点传递
@@ -86,9 +87,17 @@ font-size: 24rpx;
 - `wx.showToast()`
 - `const error_code = res.data.error_code`
 
-## 8-1, 8-2, 8-3 ‘剥夺函数 return 的能力’, 组件属性赋值与页面渲染流程解析, setData
+## 8-1 什么是‘剥夺函数return的能力’
 
-- **models/classic.js**
+- **models/classic.js** 获取请求数据
+- 理解 promise
+- **classic.js** `let a = classic.getLatest()` 需要 **models/classic.js** `getLatest()` return 内容, 但是 **models/classic.js** `getLatest()` 是异步函数无法 return 内容, 只有回调函数才能接受异步函数结果, 变成: **classic.js** `classicModel.getLatest(res => {})`, **models/classic.js** `getLatest()` 要接受回调函数变成 **models/classic.js** `getLatest(sCallback)`
+
+## 8-2, 8-3 组件属性赋值与页面渲染流程解析, setData的误区
+
+- **classic.js** **classic.wxml** **like/index.js** 传递属性
+- 微信开发工具 -> AppData 查看 data
+- `setData()` 用于数据更新
 
 ## 8-4, 8-5 movie 组件的实现
 
