@@ -25,7 +25,8 @@ class ClassicModel extends HTTP {
 		let key =
 			next_or_previous === 'next'
 				? this._fullKey(index + 1)
-				: this._fullKey(index - 1)
+        : this._fullKey(index - 1)
+    /* 先从缓存中找数据 */
 		let classic = wx.getStorageSync(key)
 		if (!classic) {
 			this.request({

@@ -153,7 +153,7 @@ font-size: 24rpx;
 - es6 改写 classic
 - wx:if, hidden 区别
 - wxss 复用 bug
-- **musicm** 音乐播放控件
+- **music/index.js** 音乐播放控件 `wx.getBackgroundAudioManager()`
 
 ## 11
 
