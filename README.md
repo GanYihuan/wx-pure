@@ -159,7 +159,7 @@ font-size: 24rpx;
 
 - 底部栏
 - **pages/book.js**
-- promise
+- promise()
 - **http-p.js**
 - **models/book.js**
 - promise callback

@@ -12,7 +12,8 @@ class HTTP {
 			this._request(url, resolve, reject, data, method)
 		})
 	}
-	/* http 请求类, 当 noRefech 为 true 时，不做未授权重试机制 */
+  /* http 请求类, 当 noRefech 为 true 时，不做未授权重试机制 */
+  /* 必填参数在默认参数前 */
 	_request(url, resolve, reject, data = {}, method = 'GET') {
 		wx.request({
 			url: config.api_blink_url + url,
