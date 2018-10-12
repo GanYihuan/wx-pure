@@ -7,13 +7,12 @@ Component({
       type: Number,
       /* 数据改变时调用 observer */
 			observer: function(newVal, oldVal, changedPath) {
-				if (newVal < 10) {
-          /* setData: 修改数据 index */
-					this.setData({
-						/* 不要修改本身 index, 容易无限循环 */
-						_index: '0' + newVal
-					})
-				}
+        let val = newVal < 10 ? '0' + newVal : newVal
+        /* setData: 修改数据 index */
+        this.setData({
+          /* 不要修改本身 index, 容易无限循环 */
+          _index: val
+        })
 			}
 		}
 	},
@@ -53,9 +52,5 @@ Component({
 			month: this.data.months[month],
 			year: year
 		})
-	},
-	/**
-	 * 组件的方法列表
-	 */
-	methods: {}
+	}
 })

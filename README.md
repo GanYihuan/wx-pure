@@ -119,9 +119,10 @@ font-size: 24rpx;
 - **components/epsoide/index.js**
 - 组件生命周期函数 `ready()`
 
-## 8-11: observer 函数的应用
+## 8-11, 8-12, 8-13 observer 函数的应用
 
-- 数字补零
+- 数字补零, 数据改变时调用 `observer`
+- 无限循环分析, 自动 08 -> 8
 
 ## 9-1, 9-2, 9-3 navi 组件与移动端触碰区域讨论
 
