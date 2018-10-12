@@ -41,9 +41,7 @@ class ClassicModel extends HTTP {
 		}
 	}
 	isFirst(index) {
-		if (index === 1) {
-			return true
-		} else return false
+    return index === 1 ? true : false
 	}
 	isLatest(index) {
 		// let key = this._fullKey('latest-' + index)
