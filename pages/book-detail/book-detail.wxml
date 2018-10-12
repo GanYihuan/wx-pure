@@ -10,6 +10,7 @@
     <view class="comment-container">
       <block wx:for="{{comments}}" wx:key="content">
         <tag-cmp class="tag" text="{{item.content}}">
+          <!-- slot -->
           <text class="num" slot="after">{{'+' + item.nums}}</text>
         </tag-cmp>
       </block>

@@ -1,14 +1,12 @@
 import { BookModel } from '../../models/book.js'
-let bookModel = new BookModel()
 // import { LikeModel } from '../../models/like.js'
-// let likeModel = new LikeModel()
 // import { CommentModel } from '../../models/comment.js'
+
+// let likeModel = new LikeModel()
 // let commentModel = new CommentModel()
+let bookModel = new BookModel()
 
 Page({
-	/**
-	 * Page initial data
-	 */
 	data: {
 		book: null,
 		comments: [],
@@ -22,8 +20,9 @@ Page({
 	 */
 	onLoad: function(options) {
 		/* pages 组件传入的参数在 options 中 */
-		const bid = options.bid
-		console.log(bid)
+    const bid = options.bid
+    /* 编译模式需要的参数 */
+		// console.log(bid)
 		const detail = bookModel.getDetail(bid)
 		const comments = bookModel.getComments(bid)
 		const likeStatus = bookModel.getLikeStatus(bid)

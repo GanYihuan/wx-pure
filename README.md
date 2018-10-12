@@ -169,5 +169,5 @@ font-size: 24rpx;
 - 真正宽度, 偏移实现 **components/book.wxss**
 - cycle `wx:for` use `<block></block>` **pages/book.wxml**
 - pages 组件传入的参数在 options 中 **book-detail.js**
-- wechat 固定开发页面-自定义编译条件
 - slot **tag.wxml** **tag.js**
+- wechat 固定开发页面-自定义编译条件: `book-detail` `pages/book-detail/book-detail` `bid=1120`
