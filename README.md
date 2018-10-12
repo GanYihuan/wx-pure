@@ -132,7 +132,8 @@ font-size: 24rpx;
 ## 9-1, 9-2, 9-3 navi 组件与移动端触碰区域讨论
 
 - **components/navi/index.js**
-- wechat 需要 https, 开发阶段可以用 http
+- flex 布局可能要设置宽高来解决问题
+- wechat 上线需要 https, 开发阶段可以用 http
 
 ## 9-4, 9-5, 9-6 初识组件的 behavior 行为
 

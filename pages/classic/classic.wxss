@@ -35,6 +35,7 @@
 }
 
 .navi {
+  /* 距底部固定距离 */
 	position: absolute;
 	bottom: 40rpx;
 }
