@@ -121,8 +121,13 @@ font-size: 24rpx;
 
 ## 8-11, 8-12, 8-13 observer 函数的应用
 
+- **components/epsoide/index.js**
 - 数字补零, 数据改变时调用 `observer`
 - 无限循环分析, 自动 08 -> 8
+
+## 8-14 epsoide组件与流行页面样式
+
+- **components/epsoide/index.js** 时间处理
 
 ## 9-1, 9-2, 9-3 navi 组件与移动端触碰区域讨论
 

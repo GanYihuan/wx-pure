@@ -1,14 +1,14 @@
 .container {
 	display: inline-flex;
   flex-direction: row;
-  /* 根据最高元素设置 */
+  /* 根据最高元素 08 设置 */
 	height: 60rpx;
 }
 
 .index-container {
 	display: flex;
   flex-direction: row;
-  /* 文本基于底部对齐 */
+  /* No 08 | 基于底部对齐 */
 	align-items: baseline;
 }
 
@@ -17,15 +17,16 @@
 }
 
 .index {
-	margin-right: 14rpx;
+  margin-right: 14rpx;
+  /* 取消字体上下间距 */
 	line-height: 60rpx;
-	font-size: 60rpx;
+  font-size: 60rpx;
+  /* 取消字体上下间距 */
 	font-weight: 800;
 }
 
 .vertical-line {
 	margin-right: 14rpx;
-	margin-bottom: 2rpx;
 	border-left: 1rpx solid black;
 	height: 44rpx;
 }
@@ -37,8 +38,10 @@
 }
 
 .month {
+  /* 取消字体上下间距 */
 	line-height: 24rpx;
-	font-size: 24rpx;
+  font-size: 24rpx;
+  /* 取消字体上下间距 */
 }
 
 .year {
