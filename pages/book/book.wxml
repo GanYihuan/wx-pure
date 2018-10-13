@@ -1,7 +1,7 @@
 <view>
   <view class="container" wx:if="{{!searchPanel}}">
     <view class="header">
-      <view class='box' bind:tap="onActivateSearch">
+      <view class="box" bind:tap="onActivateSearch">
         <image src="/images/icon/search.png" />
         <text>搜索书籍</text>
       </view>

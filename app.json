@@ -3,15 +3,15 @@
     "pages/book/book",
     "pages/book-detail/book-detail",
     "pages/classic/classic",
-    "pages/my/my"
+    "pages/my/my",
+    "components/loading/index"
   ],
   "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "旧岛小样",
     "navigationBarTextStyle": "black",
-    "navigationStyle": "default",
-    "enablePullDownRefresh": false,
-    "backgroundColor": "#fff"
+    "navigationStyle": "default"
   },
   "tabBar": {
     "borderStyle": "#000",

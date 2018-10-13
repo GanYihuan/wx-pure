@@ -1,4 +1,5 @@
 import { BookModel } from '../../models/book.js'
+import { random } from '../../utils/util.js'
 
 let bookModel = new BookModel()
 
@@ -10,6 +11,11 @@ Page({
 		searchPanel: false,
 		books: Object,
 		more: false
+	},
+	onReachBottom: function(event) {
+		this.setData({
+			more: random(16)
+		})
 	},
 	/**
 	 * Lifecycle function--Called when page load
@@ -50,7 +56,7 @@ Page({
 		// bookModel
 		// 	.getHotList()
 		// 	.then(res => {
-    //    /* res -> api1 result */
+		//    /* res -> api1 result */
 		// 		console.log(res)
 		// 		/* api2 invoked */
 		// 		return bookModel.getMyBookCount()
@@ -71,5 +77,16 @@ Page({
 				books: res
 			})
 		})
-	}
+	},
+	onActivateSearch: function(event) {
+		this.setData({
+			searchPanel: true
+		})
+	},
+	onCancel: function(event) {
+		this.setData({
+			searchPanel: false
+		})
+	},
+	onShareAppMessage() {}
 })

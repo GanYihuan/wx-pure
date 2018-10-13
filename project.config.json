@@ -36,7 +36,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -60,6 +60,12 @@
 					"id": -1,
 					"name": "book",
 					"pathName": "pages/book/book",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "search",
+					"pathName": "components/search/index",
 					"query": ""
 				}
 			]
