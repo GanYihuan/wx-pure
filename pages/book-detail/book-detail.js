@@ -1,10 +1,10 @@
 import { BookModel } from '../../models/book.js'
-// import { LikeModel } from '../../models/like.js'
-// import { CommentModel } from '../../models/comment.js'
+import { LikeModel } from '../../models/like.js'
+import { CommentModel } from '../../models/comment.js'
 
-// let likeModel = new LikeModel()
-// let commentModel = new CommentModel()
 let bookModel = new BookModel()
+let commentModel = new CommentModel()
+let likeModel = new LikeModel()
 
 Page({
 	data: {
@@ -20,8 +20,8 @@ Page({
 	 */
 	onLoad: function(options) {
 		/* pages 组件传入的参数在 options 中 */
-    const bid = options.bid
-    /* 编译模式需要的参数 */
+		const bid = options.bid
+		/* 编译模式需要的参数 */
 		// console.log(bid)
 		const detail = bookModel.getDetail(bid)
 		const comments = bookModel.getComments(bid)
@@ -33,6 +33,7 @@ Page({
 		})
 		comments.then(res => {
 			this.setData({
+				noComment: res.comments == false ? true : false,
 				comments: res.comments
 			})
 		})
@@ -41,6 +42,50 @@ Page({
 				like: res.like_status,
 				count: res.fav_nums
 			})
+		})
+	},
+	onFakePost: function() {
+		this.setData({
+			posting: true
+		})
+	},
+	onCancel: function(event) {
+		this.setData({
+			posting: false
+		})
+	},
+	onLike: function(event) {
+		let like_or_cancel = event.detail.behavior
+		likeModel.like(like_or_cancel, this.data.book.id, 400)
+	},
+	onPost: function(event) {
+		let comment = event.detail.value || event.detail.text
+		if (!comment) {
+			return
+		}
+		if (comment.length > 12) {
+			wx.showToast({
+				title: '短评最多12个字',
+				icon: 'none'
+			})
+			return
+		}
+		commentModel.post(this.data.book.id, comment, data => {
+			wx.showToast({
+				title: '+ 1',
+				icon: 'none'
+			})
+			this.data.comments.unshift({
+				content: comment,
+				nums: 1
+			})
+			this.setData({
+				comments: this.data.comments,
+				noComment: false
+			})
+		})
+		this.setData({
+			posting: false
 		})
 	},
 	/**
