@@ -1,9 +1,7 @@
-// import { HTTP } from '../../utils/http'
 import { ClassicModel } from '../../models/classic.js'
 import { LikeModel } from '../../models/like.js'
 
 /* 实例化对象 */
-// let http = new HTTP()
 let classicModel = new ClassicModel()
 let likeModel = new LikeModel()
 
@@ -26,7 +24,6 @@ Page({
 		// wx.request({
 		// 	url: 'http://bl.7yue.pro/v1/classic/latest',
 		// 	header: {
-		// 		// appkey: 'RdshydjBvcYZhMZC'
 		// 		appkey: 'GgRhTjUNUYn1fHke'
 		// 	},
 		//  /* success: 接收异步调用的结果 res */

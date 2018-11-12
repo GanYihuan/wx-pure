@@ -18,7 +18,7 @@
 
 ## 5-7, 5-8, 5-9, 5-10 苹方字体设置
 
-- **app.wxss** ios,mac 上启用
+- **app.wxss** 上启用全局字体设置
 - page 会包裹组件, 每个页面都会自动加 page
 - [page](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/wxml-wxss.html)
 - 继承样式(font, color), 会从组件外继承到组件内
@@ -64,7 +64,7 @@ font-size: 24rpx;
 
 - [生命周期函数](https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/page.html#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F)
 
-## 7-4 wx.request-4xx 状态码并不会执行 fail
+## 7-4 wx.request-4xx 状态码并不会执行 fail, 网络中断才执行
 
 - [wx.request](https://developers.weixin.qq.com/miniprogram/dev/api/network/request/wx.request.html)
 

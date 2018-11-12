@@ -1,5 +1,3 @@
-import { HTTP } from '../../utils/http.js'
-
 let likeBehavior = Behavior({
 	properties: {
 		like: Boolean,
