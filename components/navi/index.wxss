@@ -10,8 +10,8 @@
 }
 
 .navi-icon {
+  width: 80rpx;
 	height: 80rpx;
-	width: 80rpx;
 }
 
 .title {
