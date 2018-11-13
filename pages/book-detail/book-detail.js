@@ -21,8 +21,6 @@ Page({
 	onLoad: function(options) {
 		/* pages 组件传入的参数在 options 中 */
 		const bid = options.bid
-		/* 编译模式需要的参数 */
-		// console.log(bid)
 		const detail = bookModel.getDetail(bid)
 		const comments = bookModel.getComments(bid)
 		const likeStatus = bookModel.getLikeStatus(bid)

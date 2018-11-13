@@ -3,17 +3,16 @@
 	flex-direction: column;
 	/* 使其不为 static */
 	position: relative;
-	margin-top: 30rpx;
-	/* padding: 0 90rpx 0 90rpx; */
+	margin: 30rpx 0 0 0;
 	width: 240rpx;
 	height: 360rpx;
 	box-shadow: 4rpx 4rpx 6rpx #e3e3e3;
 }
 
 .container image {
+	border-radius: 4rpx;
 	width: 100%;
 	height: 100%;
-	border-radius: 4rpx;
 }
 
 .description {
@@ -36,15 +35,14 @@
 }
 
 .title {
-	margin-top: 10rpx;
+	margin: 10rpx 0 0 0;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
 }
 
 .author {
-	margin-top: -5rpx;
-	margin-bottom: 10rpx;
+	margin: -5rpx 0 10rpx 0;
 	font-size: 20rpx;
 	color: #999;
 	text-overflow: ellipsis;
@@ -56,7 +54,6 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
-	/* margin-top:3rpx; */
 	font-size: 20rpx;
 }
 
