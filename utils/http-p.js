@@ -7,6 +7,7 @@ const tips = {
 }
 
 class HTTP {
+  // 传对象 {}
 	request({ url, data = {}, method = 'GET' }) {
 		return new Promise((resolve, reject) => {
 			this._request(url, resolve, reject, data, method)
@@ -33,11 +34,6 @@ class HTTP {
 					/* params.success 是否为 null, 如果不是则执行后面代码 */
 					resolve(res.data)
 				} else {
-					// wx.showToast({
-					//   title: '出错了!',
-					//   icon: 'none',
-					//   duration: 2000
-					// })
 					reject()
 					const error_code = res.data.error_code
 					this._show_error(error_code)
@@ -45,11 +41,6 @@ class HTTP {
 			},
 			/* 没网络时才调用 */
 			fail: err => {
-				// wx.showToast({
-				//   title: '出错了!',
-				//   icon: 'none',
-				//   duration: 2000
-				// })
 				reject()
 				this._show_error(1)
 			}

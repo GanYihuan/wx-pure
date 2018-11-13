@@ -34,9 +34,9 @@ Component({
    */
 	/* hidden 不会触发完整生命周期, 适用于频繁切换 */
 	/* wx:if 会触发完整生命周期, 不大可能改变 */
-	detached: function() {
-		// wx.pauseBackgroundAudio()
-	},
+	// detached: function() {
+	// 	wx.pauseBackgroundAudio()
+	// },
 	/**
 	 * 组件的方法列表
 	 */

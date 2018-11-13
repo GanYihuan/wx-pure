@@ -1,5 +1,4 @@
-﻿// import { HTTP } from '../utils/http.js'
-import { HTTP } from '../utils/http-p.js'
+﻿import { HTTP } from '../utils/http-p.js'
 
 class BookModel extends HTTP {
 	constructor() {
@@ -15,7 +14,9 @@ class BookModel extends HTTP {
 		// 	},
 		// 	method: 'POST'
 		// })
-		return this.request({ url: 'book/hot_list' })
+		return this.request({
+			url: 'book/hot_list'
+		})
 	}
 	getMyBookCount() {
 		return this.request({

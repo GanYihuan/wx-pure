@@ -14,17 +14,22 @@
     </view>
   </view>
   <movie-cmp
-    wx:if="{{classic.type===100}}"
+    hidden="{{classic.type!==100}}"
     img="{{classic.image}}"
     content="{{classic.content}}"
   />
+  <!-- <movie-cmp
+    wx:if="{{classic.type!==100}}"
+    img="{{classic.image}}"
+    content="{{classic.content}}"
+  /> -->
   <essay-cmp
-    wx:if="{{classic.type===300}}"
+    hidden="{{classic.type!==300}}"
     img="{{classic.image}}"
     content="{{classic.content}}"
   />
   <music-cmp
-    wx:if="{{classic.type===200}}"
+    hidden="{{classic.type!==200}}"
     img="{{classic.image}}"
     content="{{classic.content}}"
     src="{{classic.url}}"

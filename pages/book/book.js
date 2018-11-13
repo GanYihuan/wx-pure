@@ -21,10 +21,10 @@ Page({
 	 * Lifecycle function--Called when page load
 	 */
 	onLoad: function(options) {
-		// /*
-		// promise 对象能保存状态, 函数不能保存状态会马上返回, 闭包函数能保存状态
-		// 异步代码写在 promise 中
-		// */
+		/*
+		promise 对象能保存状态, 函数不能保存状态会马上返回, 闭包函数能保存状态
+		异步代码写在 promise 中
+    */
 		// const promise = new Promise((resolve, reject) => {
 		// 	/* promise 状态: pending(进行中) fulfilled(成功) rejected(失败) */
 		// 	wx.getSystemInfo({
@@ -48,11 +48,7 @@ Page({
 		// 	}
 		// )
 
-		// const hotList = bookModel.getHotList()
-		// hotList.then(res => {
-		// 	console.log(res)
-		// })
-
+    /* 链式调用 api1, api2, api3 */
 		// bookModel
 		// 	.getHotList()
 		// 	.then(res => {

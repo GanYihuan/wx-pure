@@ -2,7 +2,8 @@
 	properties: {
 		type: String,
 		img: String,
-		content: String
+    content: String,
+    hidden: Boolean
 	}
 })
 
