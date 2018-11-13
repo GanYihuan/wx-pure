@@ -17,8 +17,7 @@
 }
 
 .epsoide {
-	margin-left: 20rpx;
-	margin-top: 14rpx;
+  margin: 14rpx 0 0 20rpx;
 }
 
 .like-container {
@@ -30,8 +29,7 @@
 }
 
 .like {
-	margin-right: 30rpx;
-	margin-top: 12rpx;
+  margin: 12rpx 30rpx 0 0;
 }
 
 .navi {
@@ -41,8 +39,7 @@
 }
 
 .share-btn {
-	margin-top: 28rpx;
-	margin-left: 10rpx;
+  margin: 20rpx 0 0 10rpx;
 }
 
 .share {

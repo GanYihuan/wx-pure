@@ -1,5 +1,4 @@
 ﻿import { HTTP } from '../utils/http.js'
-// import { ClassicStorage } from '../models/classic-storage.js'
 
 class ClassicModel extends HTTP {
 	prefix = 'classic'
