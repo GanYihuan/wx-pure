@@ -68,6 +68,7 @@
   <input focus="{{posting}}" confirm-type="发送" class="post" placeholder='短评最多12个字' bindconfirm="onPost"></input>
   <!-- <image class="tip" src="/images/book/tip.png"></image> -->
 </view>
+<v-mask wx:if="{{posting}}" />
 <wxs module="util">
   var limit = function(array, length) {
     return array.slice(0, length)
