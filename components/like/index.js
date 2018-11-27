@@ -36,7 +36,7 @@ Component({
       /* 
       triggerEvent: 自定义事件
       like: 事件名称
-      {behavior: behavior}: 传递参数, 设置 detail
+      { behavior: behavior }: 传递参数, 设置 detail
       */
       this.triggerEvent(
         'like',

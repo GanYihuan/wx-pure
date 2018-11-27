@@ -42,11 +42,12 @@ Page({
 		// 	}
 		// })
 
-		/* 使用回调函数剥夺了 return 能力, promise 能解决 */
+    /* 使用回调函数剥夺了 return 能力也就不能赋值操作, promise 能解决 */
+    /* 回调函数能获取值 */
 		classicModel.getLatest(res => {
 			// console.log(res)
 			// this._getLikeStatus(res.id, res.type)
-			/* setData: 数据更新 */
+			/* setData: 修改 data 里面的数据, 数据更新 */
 			this.setData({
 				// ...res
 				classic: res,
