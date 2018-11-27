@@ -5,6 +5,8 @@
 - RdshydjBvcYZhMZC
 - GgRhTjUNUYn1fHke
 
+## 运行
+
 ## 5-3 定义引用与使用组件
 
 - **classic.json** 引用组件

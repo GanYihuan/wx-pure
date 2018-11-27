@@ -34,6 +34,7 @@ Page({
 		// 	}
 		// })
 
+    /* this 指向 */
 		// http.request({
 		// 	url: 'classic/latest',
 		// 	success: data => {
@@ -41,7 +42,7 @@ Page({
 		// 	}
 		// })
 
-		/* 使用回调函数剥夺了 return 能力 */
+		/* 使用回调函数剥夺了 return 能力, promise 能解决 */
 		classicModel.getLatest(res => {
 			// console.log(res)
 			// this._getLikeStatus(res.id, res.type)

@@ -1,14 +1,14 @@
 var omit = function(text, length) {
-	// console.log('asfasdfadf')
-	if (!text) {
-		return ''
-	}
-	console.log(text.title)
-	var short = text.title.substring(0, length)
-	console.log(short)
-	return short + '...'
+  // console.log('asfasdfadf')
+  if (!text) {
+    return ''
+  }
+  console.log(text.title)
+  var short = text.title.substring(0, length)
+  console.log(short)
+  return short + '...'
 }
 
 module.exports = {
-	omit: omit
+  omit: omit
 }
