@@ -1,6 +1,7 @@
 {
 	"usingComponents": {
-		"tag-cmp": "/components/tag/index",
+		"v-tag": "/components/tag/index",
+		"v-like": "/components/like/index",
 		"v-mask": "/components/mask/index"
 	}
 }

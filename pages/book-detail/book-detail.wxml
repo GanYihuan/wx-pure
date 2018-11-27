@@ -8,11 +8,10 @@
     <text class="headline">短评</text>
     <text class="shadow" wx:if="{{noComment}}">还没有短评</text>
     <view class="comment-container">
-      <block wx:for="{{comments}}" wx:key="content">
-        <tag-cmp class="tag" text="{{item.content}}">
-          <!-- slot -->
+      <block wx:for="{{util.limit(comments,15)}}">
+        <v-tag class="tag" text="{{item.content}}">
           <text class="num" slot="after">{{'+' + item.nums}}</text>
-        </tag-cmp>
+        </v-tag>
       </block>
     </view>
   </view>
@@ -45,13 +44,9 @@
     <text>输入短评</text>
   </view>
   <view class="like-container">
-    <like-cmp class="like" like="{{like}}" count="{{count}}" bind:like="onLike" />
-    <img-btn-cmp class="share-btn" open-type="share">
-      <image class="share" slot="img" src="/images/icon/share.png" />
-    </img-btn-cmp>
+    <v-like bind:like="onLike" class="like" like="{{likeStatus}}" count="{{likeCount}}" />
   </view>
 </view>
-<mask-cmp wx:if="{{posting}}" />
 <view wx:if="{{posting}}" class="posting-container">
   <view class="post-header">
     <text wx:if="{{!(comments==false)}}">仅可点击标签+1</text>
@@ -59,10 +54,10 @@
     <text class="cancel" bind:tap="onCancel">取消</text>
   </view>
   <view class="comment-container">
-    <block wx:for="{{util.limit(comments, 3)}}">
-      <tag-cmp bind:tapping="onPost" tag-class="tag" text="{{item.content}}">
+    <block wx:for="{{util.limit(comments,3)}}">
+      <v-tag bind:tapping="onPost" class="tag" text="{{item.content}}">
         <text class="num" slot="after">{{'+' + item.nums}}</text>
-      </tag-cmp>
+      </v-tag>
     </block>
   </view>
   <input focus="{{posting}}" confirm-type="发送" class="post" placeholder='短评最多12个字' bindconfirm="onPost"></input>
