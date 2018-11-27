@@ -37,9 +37,11 @@ class ClassicModel extends HTTP {
       sCallback(classic)
     }
   }
+  /* 是否是最新一期期刊 */
   isFirst(index) {
     return index === 1 ? true : false
   }
+  /* 是否是最后一期期刊 */
   isLatest(index) {
     // let key = this._fullKey('latest-' + index)
     // let latestIndex = wx.getStorageSync(key)
