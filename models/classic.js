@@ -5,6 +5,7 @@ class ClassicModel extends HTTP {
   constructor() {
     super()
   }
+  /* 获取最新的期刊 */
   getLatest(sCallback) {
     /* this.request() 是 async, 不能 return 结果 */
     this.request({
@@ -20,6 +21,7 @@ class ClassicModel extends HTTP {
       }
     })
   }
+  /* 获取下一期或者上一期期刊 */
   getClassic(index, next_or_previous, sCallback) {
     let key = next_or_previous === 'next' ? this._fullKey(index + 1) : this._fullKey(index - 1)
     /* 先从缓存中找数据 */

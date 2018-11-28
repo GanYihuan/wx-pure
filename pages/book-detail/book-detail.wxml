@@ -1,3 +1,4 @@
+<!-- pages/detail/detail.wxml -->
 <view class="container">
   <view class="head">
     <image src="{{book.image}}"></image>
@@ -8,10 +9,10 @@
     <text class="headline">短评</text>
     <text class="shadow" wx:if="{{noComment}}">还没有短评</text>
     <view class="comment-container">
-      <block wx:for="{{util.limit(comments,15)}}">
-        <v-tag class="tag" text="{{item.content}}">
+      <block wx:for="{{util.limit(comments,15)}}" wx:key="">
+        <tag-cmp class="tag" text="{{item.content}}">
           <text class="num" slot="after">{{'+' + item.nums}}</text>
-        </v-tag>
+        </tag-cmp>
       </block>
     </view>
   </view>
@@ -44,9 +45,13 @@
     <text>输入短评</text>
   </view>
   <view class="like-container">
-    <v-like bind:like="onLike" class="like" like="{{likeStatus}}" count="{{likeCount}}" />
+    <like-cmp bind:like="onLike" class="like" like="{{like}}" count="{{count}}" />
+    <img-btn-cmp class="share-btn" open-type="share">
+      <image class="share" slot="img" src="/images/icon/share.png" />
+    </img-btn-cmp>
   </view>
 </view>
+<mask-cmp wx:if="{{posting}}" />
 <view wx:if="{{posting}}" class="posting-container">
   <view class="post-header">
     <text wx:if="{{!(comments==false)}}">仅可点击标签+1</text>
@@ -54,16 +59,16 @@
     <text class="cancel" bind:tap="onCancel">取消</text>
   </view>
   <view class="comment-container">
-    <block wx:for="{{util.limit(comments,3)}}">
-      <v-tag bind:tapping="onPost" class="tag" text="{{item.content}}">
+    <block wx:for="{{util.limit(comments, 3)}}">
+      <!-- {{index}} -->
+      <tag-cmp bind:tapping="onPost" tag-class="tag" text="{{item.content}}">
         <text class="num" slot="after">{{'+' + item.nums}}</text>
-      </v-tag>
+      </tag-cmp>
     </block>
   </view>
   <input focus="{{posting}}" confirm-type="发送" class="post" placeholder='短评最多12个字' bindconfirm="onPost"></input>
   <!-- <image class="tip" src="/images/book/tip.png"></image> -->
 </view>
-<v-mask wx:if="{{posting}}" />
 <wxs module="util">
   var limit = function(array, length) {
     return array.slice(0, length)

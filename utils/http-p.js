@@ -7,13 +7,12 @@ const tips = {
 }
 
 class HTTP {
-  // 传对象 {}
   request({ url, data = {}, method = 'GET' }) {
     return new Promise((resolve, reject) => {
+      /* 必填参数在默认参数之前 */
       this._request(url, resolve, reject, data, method)
     })
   }
-  /* http 请求类, 当 noRefech 为 true 时，不做未授权重试机制 */
   /* 必填参数在默认参数前 */
   _request(url, resolve, reject, data = {}, method = 'GET') {
     wx.request({
@@ -25,13 +24,9 @@ class HTTP {
         appkey: config.appkey
       },
       success: res => {
-        /*
-        判断以2（2xx)开头的状态码为正确
-				异常不要返回到回调中，就在 request 中处理，记录日志并 showToast 一个统一的错误即可
-        */
+        /* 判断以2（2xx)开头的状态码为正确 */
         const code = res.statusCode.toString()
         if (code.startsWith('2')) {
-          /* params.success 是否为 null, 如果不是则执行后面代码 */
           resolve(res.data)
         } else {
           reject()
