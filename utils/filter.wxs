@@ -3,9 +3,9 @@ var omit = function(text, length) {
   if (!text) {
     return ''
   }
-  console.log(text.title)
+  // console.log(text.title)
   var short = text.title.substring(0, length)
-  console.log(short)
+  // console.log(short)
   return short + '...'
 }
 

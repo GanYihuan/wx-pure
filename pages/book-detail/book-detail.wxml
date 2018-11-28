@@ -52,7 +52,7 @@
   </view>
 </view>
 <mask-cmp wx:if="{{posting}}" />
-<view wx:if="{{posting}}" class="posting-container">
+<view class="posting-container" wx:if="{{posting}}">
   <view class="post-header">
     <text wx:if="{{!(comments==false)}}">仅可点击标签+1</text>
     <text wx:else>暂无短评</text>
@@ -66,7 +66,7 @@
       </tag-cmp>
     </block>
   </view>
-  <input focus="{{posting}}" confirm-type="发送" class="post" placeholder='短评最多12个字' bindconfirm="onPost"></input>
+  <input class="post" focus="{{posting}}" confirm-type="发送" placeholder='短评最多12个字' bind:confirm="onPost"></input>
   <!-- <image class="tip" src="/images/book/tip.png"></image> -->
 </view>
 <wxs module="util">
@@ -83,6 +83,6 @@
   }
   module.exports = {
     limit: limit,
-    format:format
+    format: format
   }
 </wxs>
