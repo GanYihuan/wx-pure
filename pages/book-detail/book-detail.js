@@ -24,22 +24,32 @@ Page({
     const detail = bookModel.getDetail(bid)
     const comments = bookModel.getComments(bid)
     const likeStatus = bookModel.getLikeStatus(bid)
-    detail.then(res => {
+    // detail.then(res => {
+    //   this.setData({
+    //     book: res
+    //   })
+    // })
+    // comments.then(res => {
+    //   this.setData({
+    //     noComment: res.comments == false ? true : false,
+    //     comments: res.comments
+    //   })
+    // })
+    // likeStatus.then(res => {
+    //   this.setData({
+    //     like: res.like_status,
+    //     count: res.fav_nums
+    //   })
+    // })
+    Promise.all([detail, comments, likeStatus]).then(res => {
+      console.log(res)
       this.setData({
-        book: res
+        book: res[0],
+        comments: res[1].comments,
+        likeStatus: res[2].like_status,
+        likeCount: res[2].fav_nums
       })
-    })
-    comments.then(res => {
-      this.setData({
-        noComment: res.comments == false ? true : false,
-        comments: res.comments
-      })
-    })
-    likeStatus.then(res => {
-      this.setData({
-        like: res.like_status,
-        count: res.fav_nums
-      })
+      wx.hideLoading()
     })
   },
   onFakePost: function() {

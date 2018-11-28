@@ -9,9 +9,9 @@
     <view class="sub-container">
       <image class="head-img" src="/images/book/quality.png" />
       <view class="books-container">
-      <block wx:for="{{books}}" wx:key="id" wx:for-item="itemName">
-        <book-cmp class="book" book="{{itemName}}" />
-      </block>
+        <block wx:for="{{books}}" wx:key="id" wx:for-item="itemName">
+          <book-cmp class="book" book="{{itemName}}" />
+        </block>
       </view>
     </view>
   </view>

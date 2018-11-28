@@ -1,11 +1,9 @@
 {
 	"pages": [
 		"pages/book/book",
-		"pages/book-detail/book-detail",
-		"components/mask/index",
 		"pages/classic/classic",
 		"pages/my/my",
-		"components/loading/index"
+		"pages/book-detail/book-detail"
 	],
 	"window": {
 		"backgroundTextStyle": "light",
