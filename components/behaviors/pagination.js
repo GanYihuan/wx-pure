@@ -5,7 +5,8 @@ let paginationBev = Behavior({
     count: 20,
     dataArray: [],
     empty: false,
-    ending: false
+    ending: false,
+    total: 0
   },
   methods: {
     setMoreData: function(dataArray) {
@@ -24,8 +25,16 @@ let paginationBev = Behavior({
       })
       return true
     },
+    setTotal(total) {
+      this.data.total = total
+    },
     hasMore: function() {
-      return !this.data.ending
+      if (this.data.dataArray.length >= this.data.total) {
+        return false
+      } else {
+        return true
+      }
+      // return !this.data.ending
     },
     getCurrentStart: function() {
       return this.data.start

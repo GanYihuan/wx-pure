@@ -1,4 +1,4 @@
-// import { HTTP } from '../../utils/http-p'
+// import { HTTP } from '../../utils/http'
 import { KeywordModel } from '../../models/keyword'
 import { BookModel } from '../../models/book'
 import { paginationBev } from '../behaviors/pagination.js'
@@ -19,6 +19,7 @@ Component({
     historyWords: [],
     hotKeys: [],
     q: '',
+    /* 锁, 防止多次无用的加载 */
     loading: false,
     loadingCenter: false,
     dataArray: [],
@@ -47,9 +48,14 @@ Component({
       this.setData({
         loading: true
       })
-      // bookModal.search(length, this.data.q)
-      // .then(res => {
-      // })
+      const length = this.data.dataArray.length
+      bookModel.search(length, this.data.q).then(res => {
+        const tempArray = this.data.dataArray.concat(res.books)
+        this.setData({
+          dataArray: tempArray,
+          loading: false
+        })
+      })
       // http.request({
       //   url: 'book/search?summary=1',
       //   data: {
@@ -84,7 +90,8 @@ Component({
       bookModel.search(0, q).then(res => {
         this.setData({
           dataArray: res.books,
-          loadingCenter: false
+          loadingCenter: false,
+          q
         })
         keyModel.addToHistory(q)
       })

@@ -9,9 +9,7 @@ const random = function generateMixed(n) {
   return res
 }
 
-function breakSection(text) {
-  // let s=
-}
+function breakSection(text) {}
 
 module.exports = {
   random: random,

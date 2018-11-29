@@ -7,10 +7,12 @@ Page({
   data: {
     searchPanel: false,
     books: Object,
+    /* 加载更多 */
     more: false
   },
   onReachBottom: function(event) {
     this.setData({
+      /* 改成 true, random() 保证 more 的值是变化的 */
       more: random(16)
     })
   },
