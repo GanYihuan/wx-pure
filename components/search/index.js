@@ -12,7 +12,7 @@ Component({
   properties: {
     more: {
       type: String,
-      observer: '_loadMore'
+      observer: 'loadMore'
     }
   },
   data: {
@@ -22,7 +22,7 @@ Component({
     /* 锁, 防止多次无用的加载 */
     loading: false,
     loadingCenter: false,
-    dataArray: [],
+    // dataArray: [],
     searching: false
   },
   /* 组件初始化调用 */
@@ -37,25 +37,32 @@ Component({
     })
   },
   methods: {
-    _loadMore: function() {
+    loadMore: function() {
       if (!this.data.q) {
+        return
+      }
+      if (this.data.loading) {
         return
       }
       let hasMore = this.hasMore()
       if (!hasMore) {
         return
       }
-      this.setData({
-        loading: true
-      })
-      const length = this.data.dataArray.length
-      bookModel.search(length, this.data.q).then(res => {
-        const tempArray = this.data.dataArray.concat(res.books)
-        this.setData({
-          dataArray: tempArray,
-          loading: false
-        })
-      })
+      if (this.hasMore()) {
+        this.data.loading = true
+        // const length = this.data.dataArray.length
+        bookModel.search(this.getCurrentStart(), this.data.q).then(
+          res => {
+            // const tempArray = this.data.dataArray.concat(res.books)
+            this.setMoreData(res.books)
+            this.data.loading = false
+          },
+          () => {
+            /* 断网后避免死锁 */
+            this.data.loading = false
+          }
+        )
+      }
       // http.request({
       //   url: 'book/search?summary=1',
       //   data: {
@@ -71,12 +78,13 @@ Component({
       // })
     },
     onCancel: function(event) {
+      this.initPagination()
       this.triggerEvent('cancel', {}, {})
     },
     onDelete: function(event) {
+      this.initPagination()
       this.setData({
         searching: false,
-        empty: false,
         q: ''
       })
     },
@@ -85,11 +93,13 @@ Component({
         searching: true,
         loadingCenter: true
       })
-      this.initPagination()
+      // this.initPagination()
       const q = event.detail.value || event.detail.text
       bookModel.search(0, q).then(res => {
+        this.setMoreData(res.books)
+        this.setTotal(res.total)
         this.setData({
-          dataArray: res.books,
+          // dataArray: res.books,
           loadingCenter: false,
           q
         })

@@ -1,12 +1,12 @@
 let paginationBev = Behavior({
   properties: {},
   data: {
-    start: 0,
+    // start: 0,
     count: 20,
-    dataArray: [],
     empty: false,
-    ending: false,
-    total: 0
+    dataArray: [],
+    total: null,
+    noneResult: false
   },
   methods: {
     setMoreData: function(dataArray) {
@@ -27,6 +27,11 @@ let paginationBev = Behavior({
     },
     setTotal(total) {
       this.data.total = total
+      if (total == 0) {
+        this.setData({
+          noneResult: true
+        })
+      }
     },
     hasMore: function() {
       if (this.data.dataArray.length >= this.data.total) {
@@ -34,17 +39,16 @@ let paginationBev = Behavior({
       } else {
         return true
       }
-      // return !this.data.ending
     },
     getCurrentStart: function() {
-      return this.data.start
+      // return this.data.start
+      return this.data.dataArray.length
     },
     initPagination: function() {
-      this.data.ending = false
-      this.data.start = 0
-      this.data.dataArray = []
+      this.data.total = null
       this.setData({
-        dataArray: []
+        dataArray: [],
+        noneResult: false
       })
     }
   }
