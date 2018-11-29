@@ -19,6 +19,7 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function(options) {
+    wx.showLoading()
     /* pages 组件传入的参数在 options 中 */
     const bid = options.bid
     const detail = bookModel.getDetail(bid)

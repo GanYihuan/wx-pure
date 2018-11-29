@@ -3,18 +3,20 @@
     <view class="search-container">
       <image class="icon" src="images/search.png" />
       <input class="bar" placeholder-class="in-bar" placeholder="书籍名" bind:confirm="onConfirm" value="{{q}}" auto-focus="true" />
-      <image class="cancel-img" bind:tap="onDelete" src="images/cancel.png" />
+      <image class="cancel-img" src="images/cancel.png" bind:tap="onDelete" />
     </view>
     <view class="cancel" bind:tap="onCancel">取消</view>
   </view>
-  <view wx:if="{{!finished}}">
+  <view wx:if="{{!searching}}">
     <view class="history">
       <view class="title">
         <view class="chunk"></view>
         <text>历史搜索</text>
       </view>
       <view class="tags">
-        <tag-cmp bind:tapping="onConfirm" wx:for="{{historyKeys}}" wx:key="" text="{{item}}" />
+        <block wx:for="{{historyWords}}" wx:key="">
+          <tag-cmp text="{{item}}" bind:tapping="onConfirm" />
+        </block>
       </view>
     </view>
     <view class="history hot-search">
@@ -23,13 +25,15 @@
         <text>热门搜索</text>
       </view>
       <view class="tags">
-        <tag-cmp bind:tapping="onConfirm" wx:for="{{hotKeys}}" wx:key="" text="{{item}}" />
+        <block wx:for="{{hotKeys}}" wx:key="">
+          <tag-cmp text="{{item}}" bind:tapping="onConfirm" />
+        </block>
       </view>
     </view>
   </view>
-  <view class="books-container" wx:if="{{finished}}">
+  <view class="books-container" wx:if="{{searching}}">
     <block wx:for="{{dataArray}}" wx:key="{{item.id}}">
-      <book-cmp class="book" show-like="{{false}}" book="{{item}}" />
+      <book-cmp class="book" book="{{item}}" show-like="{{false}}" />
     </block>
   </view>
   <loading-cmp class="loading" wx:if="{{loading}}" />

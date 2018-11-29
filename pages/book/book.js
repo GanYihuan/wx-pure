@@ -4,9 +4,6 @@ import { random } from '../../utils/util.js'
 let bookModel = new BookModel()
 
 Page({
-  /**
-   * Page initial data
-   */
   data: {
     searchPanel: false,
     books: Object,
