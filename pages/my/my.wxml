@@ -1,7 +1,6 @@
-<!-- pages/my/my.wxml -->
 <view class="container">
   <image src="/images/my/my@bg.png" class="bg"></image>
-  <img-btn-cmp wx:if="{{!hasUserInfo}}" open-type="getUserInfo" class="avatar-position" bind:getuserinfo="onGetUserInfo">
+  <img-btn-cmp class="avatar-position" wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bind:getuserinfo="onGetUserInfo">
     <image slot="img" class="avatar" src="/images/my/my.png" />
   </img-btn-cmp>
   <view class="avatar-container avatar-position">
@@ -21,8 +20,8 @@
   <view class="like-container">
     <image class=".headline" src="/images/my/like.png" />
     <view class="preview-container">
-      <block wx:for="{{classics}}">
-        <previe-cmp bind:tap="onPreviewTap" class="preview" classic="{{item}}" />
+      <block wx:for="{{classics}}" wx:key="">
+        <previe-cmp class="preview" bind:tap="onPreviewTap" classic="{{item}}" />
       </block>
     </view>
   </view>

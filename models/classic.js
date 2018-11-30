@@ -21,6 +21,13 @@ class ClassicModel extends HTTP {
       }
     })
   }
+  getById(cid, type, success) {
+    let params = {
+      url: 'classic/' + type + '/' + cid,
+      success: success
+    }
+    this.request(params)
+  }
   /* 获取下一期或者上一期期刊 */
   getClassic(index, next_or_previous, sCallback) {
     let key = next_or_previous === 'next' ? this._fullKey(index + 1) : this._fullKey(index - 1)
@@ -38,6 +45,13 @@ class ClassicModel extends HTTP {
     } else {
       sCallback(classic)
     }
+  }
+  getMyFavor(success) {
+    let params = {
+      url: 'classic/favor',
+      success: success
+    }
+    this.request(params)
   }
   /* 是否是最新一期期刊 */
   isFirst(index) {

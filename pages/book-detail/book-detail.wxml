@@ -65,7 +65,7 @@
         <text class="num" slot="after">{{'+' + item.nums}}</text>
       </tag-cmp>
     </block>
-  </view>
+  </view> 
   <input class="post" focus="{{posting}}" confirm-type="发送" placeholder='短评最多12个字' bind:confirm="onPost"></input>
   <!-- <image class="tip" src="/images/book/tip.png"></image> -->
 </view>

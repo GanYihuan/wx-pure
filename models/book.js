@@ -27,10 +27,12 @@ class BookModel extends HTTP {
       }
     })
   }
-  getMyBookCount() {
-    return this.request({
-      url: '/book/favor/count'
-    })
+  getMyBookCount(success) {
+    let params = {
+      url: '/book/favor/count',
+      success: success
+    }
+    this.request(params)
   }
   getDetail(bid) {
     return this.request({

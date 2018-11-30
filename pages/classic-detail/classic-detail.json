@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "navi-cmp": "/components/navi/index",
+    "epsoide-cmp": "/components/epsoide/index",
+    "like-cmp": "/components/like/index",
+    "movie-cmp": "/components/classic/movie/index",
+    "music-cmp": "/components/classic/music/index",
+    "essay-cmp": "/components/classic/essay/index",
+    "img-btn-cmp": "/components/image-button/index"
+  },
+  "disableScroll": true
+}

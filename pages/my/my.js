@@ -1,66 +1,83 @@
-// pages/my/my.js
+import { ClassicModel } from '../../models/classic.js'
+import { BookModel } from '../../models/book.js'
+
+let classicModel = new ClassicModel()
+let bookModel = new BookModel()
+
 Page({
-
-  /**
-   * Page initial data
-   */
   data: {
-
+    hasUserInfo: true,
+    userInfo: null,
+    classics: [],
+    myBooksCount: 0
   },
-
   /**
-   * Lifecycle function--Called when page load
+   * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onShow: function(options) {
+    this.getMyFavor()
+    this.hasGottenUserInfo()
+    this.getMyBookCount()
   },
-
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
-  onReady: function () {
-
+  getMyBookCount() {
+    bookModel.getMyBookCount(data => {
+      this.setData({
+        myBooksCount: data.count
+      })
+    })
   },
-
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow: function () {
-
+  hasGottenUserInfo: function() {
+    /* 获取用户的当前设置 */
+    wx.getSetting({
+      success: data => {
+        /* 如果用户已经授权 */
+        if (data.authSetting['scope.userInfo']) {
+          wx.getUserInfo({
+            success: data => {
+              this.setData({
+                hasUserInfo: true,
+                userInfo: data.userInfo
+              })
+            }
+          })
+        } else {
+          this.setData({
+            hasUserInfo: false
+          })
+        }
+      }
+    })
   },
-
-  /**
-   * Lifecycle function--Called when page hide
-   */
-  onHide: function () {
-
+  onGetUserInfo: function(event) {
+    let userInfo = event.detail.userInfo
+    if (userInfo) {
+      this.setData({
+        hasUserInfo: true,
+        userInfo: userInfo
+      })
+    }
   },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload: function () {
-
+  getMyFavor: function() {
+    classicModel.getMyFavor(data => {
+      this.setData({
+        classics: data
+      })
+    })
   },
-
-  /**
-   * Page event handler function--Called when user drop down
-   */
-  onPullDownRefresh: function () {
-
+  onPreviewTap: function(event) {
+    wx.navigateTo({
+      url: '/pages/classic-detail/classic-detail?cid=' + event.detail.cid + '&type=' + event.detail.type
+    })
   },
-
-  /**
-   * Called when page reach bottom
-   */
-  onReachBottom: function () {
-
+  onJumpToAbout: function(event) {
+    wx.navigateTo({
+      url: '/pages/about/about'
+    })
   },
-
-  /**
-   * Called when user click on the top right corner to share
-   */
-  onShareAppMessage: function () {
-
-  }
+  onStudy: function(event) {
+    wx.navigateTo({
+      url: '/pages/course/course'
+    })
+  },
+  onShareAppMessage() {}
 })
