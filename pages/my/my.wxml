@@ -1,14 +1,14 @@
 <view class="container">
-  <image src="/images/my/my@bg.png" class="bg"></image>
+  <image class="bg" src="/images/my/my@bg.png"></image>
   <img-btn-cmp class="avatar-position" wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bind:getuserinfo="onGetUserInfo">
-    <image slot="img" class="avatar" src="/images/my/my.png" />
+    <image class="avatar" src="/images/my/my.png" slot="img" />
   </img-btn-cmp>
   <view class="avatar-container avatar-position">
-    <image src="{{userInfo.avatarUrl}}" wx:if="{{hasUserInfo}}" class="avatar" />
+    <image class="avatar" src="{{userInfo.avatarUrl}}" wx:if="{{hasUserInfo}}" />
     <open-data wx:if="{{hasUserInfo}}" type="userNickName"></open-data>
   </view>
   <view class="about-container">
-    <view bind:tap="onJumpToAbout" class="about-us">
+    <view class="about-us" bind:tap="onJumpToAbout">
       <image src="/images/my/about.png" />
       <text class="description">关于我们</text>
     </view>
@@ -26,4 +26,4 @@
     </view>
   </view>
 </view>
-<image bind:tap="onStudy" class="study" src="/images/my/study.png"></image>
+<image class="study" bind:tap="onStudy" src="/images/my/study.png"></image>
