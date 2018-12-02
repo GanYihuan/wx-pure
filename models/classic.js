@@ -10,11 +10,9 @@ class ClassicModel extends HTTP {
     /* this.request() 是 async, 不能 return 结果 */
     this.request({
       url: 'classic/latest',
-      /* success: 接收异步调用的结果 */
       success: res => {
         let key = this._fullKey(res.index)
         wx.setStorageSync(key, res)
-        /* 最新一期的期数 index 写入缓存 */
         this._setLatestIndex(res.index)
         /* 回调函数回传回去 */
         sCallback(res)
@@ -31,7 +29,6 @@ class ClassicModel extends HTTP {
   /* 获取下一期或者上一期期刊 */
   getClassic(index, next_or_previous, sCallback) {
     let key = next_or_previous === 'next' ? this._fullKey(index + 1) : this._fullKey(index - 1)
-    /* 先从缓存中找数据 */
     let classic = wx.getStorageSync(key)
     if (!classic) {
       this.request({
@@ -59,30 +56,23 @@ class ClassicModel extends HTTP {
   }
   /* 是否是最后一期期刊 */
   isLatest(index) {
-    // let key = this._fullKey('latest-' + index)
-    // let latestIndex = wx.getStorageSync(key)
     let latestIndex = this._getLastIndex(index)
-    if (latestIndex) {
-      if (index === latestIndex) {
-        return true
-      }
-    } else return false
+    return latestIndex === index ? true : false
   }
-  /**
-   * 在缓存中存放最新一期的期数 index
-   */
+  /* 在缓存中存放最新一期的期数 index */
   _setLatestIndex(index) {
     let key = this._fullKey('latest-' + index)
     wx.setStorageSync(key, index)
   }
+  _fullKey(partKey) {
+    let key = this.prefix + '-' + partKey
+    return key
+  }
+  /* 读取缓存 */
   _getLastIndex(index) {
     let key = this._fullKey('latest-' + index)
     let latestIndex = wx.getStorageSync(key)
     return latestIndex
-  }
-  _fullKey(partKey) {
-    let key = this.prefix + '-' + partKey
-    return key
   }
 }
 

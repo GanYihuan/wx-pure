@@ -1,19 +1,19 @@
 .container {
-	display: inline-flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	border-radius: 4rpx;
-	width: 600rpx;
-	height: 80rpx;
-	background-color: #f7f7f7;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4rpx;
+  width: 600rpx;
+  height: 80rpx;
+  background-color: #f7f7f7;
 }
 
 .navi-icon {
   width: 80rpx;
-	height: 80rpx;
+  height: 80rpx;
 }
 
 .title {
-	font-size: 28rpx;
+  font-size: 28rpx;
 }

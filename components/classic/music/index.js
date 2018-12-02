@@ -3,9 +3,7 @@ import { classicBehavior } from '../classic-beh.js'
 let mMgr = wx.getBackgroundAudioManager()
 
 Component({
-  /**
-   * 组件的属性列表
-   */
+  /* 组件的属性列表 */
   behaviors: [classicBehavior],
   /**
    * 外部属性
