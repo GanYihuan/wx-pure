@@ -51,19 +51,19 @@ Page({
     // bookModel
     // 	.getHotList()
     // 	.then(res => {
-    //    /* res -> api1 result */
+    //    /* res -> api1 结果 */
     // 		console.log(res)
-    // 		/* api2 invoked */
+    // 		/* api2 调用 */
     // 		return bookModel.getMyBookCount()
     // 	})
     // 	.then(res => {
-    // 		/* res -> api2 result */
+    // 		/* res -> api2 结果 */
     //    console.log(res)
-    //    /* api3 invoked */
+    //    /* api3 调用 */
     // 		return bookModel.getMyBookCount()
     // 	})
     // 	.then(res => {
-    //    /* res -> api3 result */
+    //    /* res -> api3 结果 */
     // 		console.log(res)
     // 	})
 

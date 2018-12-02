@@ -55,7 +55,7 @@ Page({
   onPrevious: function() {
     this._updateClassic('previous')
   },
-  onNext: function() {
+  onNext: function(event) {
     this._updateClassic('next')
   },
   _updateClassic: function(nextOrPrevious) {

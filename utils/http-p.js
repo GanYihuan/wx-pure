@@ -7,6 +7,7 @@ const tips = {
 }
 
 class HTTP {
+  /* 解构 {} */
   request({ url, data = {}, method = 'GET' }) {
     return new Promise((resolve, reject) => {
       /* 必填参数在默认参数之前 */
