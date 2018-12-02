@@ -6,9 +6,6 @@ let classicModel = new ClassicModel()
 let likeModel = new LikeModel()
 
 Page({
-	/**
-	 * 页面的初始数据
-	 */
 	data: {
 		classic: null,
 		first: false,
@@ -26,7 +23,7 @@ Page({
 		// 	header: {
 		// 		appkey: 'GgRhTjUNUYn1fHke'
 		// 	},
-		//  /* success: 接收异步调用的结果 res */
+		//  /* success: 接收异步调用的结果 res, this 指向 */
 		// 	success: (res) => {
 		//    console.log(res)
 		//    console.log(this.data.likeCount)
@@ -34,16 +31,10 @@ Page({
 		// 	}
 		// })
 
-    /* this 指向 */
-		// http.request({
-		// 	url: 'classic/latest',
-		// 	success: data => {
-		// 		console.log(data)
-		// 	}
-		// })
-
     /* 使用回调函数剥夺了 return 能力也就不能赋值操作, promise 能解决 */
     /* 回调函数能获取值 */
+    /* classicModel.getClassic() 是异步，不能用同步方式调用, 里面没有 return */
+    // let latest = classicModel.getClassic()
 		classicModel.getLatest(res => {
 			// console.log(res)
 			// this._getLikeStatus(res.id, res.type)
@@ -55,13 +46,9 @@ Page({
 				likeStatus: res.like_status
 			})
 		})
-		/*
-    onLoad: latestClassic lastestIndex
-    onPreviews: currentClassic currentIndex
-    */
 	},
 	onLike: function(event) {
-		// console.log(event)
+    /* 获取传过来的参数 */
 		let behavior = event.detail.behavior
 		likeModel.like(behavior, this.data.classic.id, this.data.classic.type)
 	},

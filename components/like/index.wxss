@@ -1,8 +1,7 @@
 .container {
 	display: inline-flex;
 	flex-direction: row;
-  /* 指定宽度，否则会出现移动 */
-  /* 数字显示 k */
+  /* 指定宽度，否则会出现移动, 数字显示使用 k */
 	width: 120rpx;
 	padding: 10rpx;
 }
@@ -13,7 +12,6 @@
 }
 
 .container text {
-  /* 偏移设置 */
 	position: relative;
 	bottom: 10rpx;
 	left: 6rpx;

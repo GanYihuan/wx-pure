@@ -1,14 +1,10 @@
 Component({
-  /**
-   * 组件的属性列表
-   */
   properties: {
     index: {
       type: Number,
       /* 数据改变时调用 observer */
       observer: function(newVal, oldVal, changedPath) {
         let val = newVal < 10 ? '0' + newVal : newVal
-        /* setData: 修改数据 index */
         this.setData({
           /* 不要修改本身 index, 容易无限循环 */
           _index: val
@@ -26,9 +22,7 @@ Component({
     month: String,
     _index: String
   },
-  /*
-  组件生命周期函数, 组件布局完成后执行
-  */
+  /* 组件生命周期函数, 组件布局完成后执行 */
   ready: function() {
     let date = new Date()
     let month = date.getMonth()

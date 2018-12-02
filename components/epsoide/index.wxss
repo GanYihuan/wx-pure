@@ -1,49 +1,49 @@
 .container {
-	display: inline-flex;
+  display: inline-flex;
   flex-direction: row;
   /* 根据最高元素 08 font-size 设置 */
-	height: 60rpx;
+  height: 60rpx;
 }
 
 .index-container {
-	display: flex;
+  display: flex;
   flex-direction: row;
   /* No 08 | 基于底部对齐 */
-	align-items: baseline;
+  align-items: baseline;
 }
 
 .plain {
-	font-size: 32rpx;
+  font-size: 32rpx;
 }
 
 .index {
   margin: 0 14rpx 0 0;
   /* 取消字体上下间距 */
-	line-height: 60rpx;
+  line-height: 60rpx;
   font-size: 60rpx;
   /* 取消字体上下间距 */
-	font-weight: 800;
+  font-weight: 800;
 }
 
 .vertical-line {
-	margin: 0 14rpx 0 0;
-	border-left: 1rpx solid #000;
-	height: 44rpx;
+  margin: 0 14rpx 0 0;
+  border-left: 1rpx solid #000;
+  height: 44rpx;
 }
 
 .date-container {
-	display: flex;
-	flex-direction: column;
-	margin: 5rpx 0 0 0;
+  display: flex;
+  flex-direction: column;
+  margin: 5rpx 0 0 0;
 }
 
 .month {
   /* 取消字体上下间距 */
-	line-height: 24rpx;
+  line-height: 24rpx;
   font-size: 24rpx;
   /* 取消字体上下间距 */
 }
 
 .year {
-	font-size: 20rpx;
+  font-size: 20rpx;
 }

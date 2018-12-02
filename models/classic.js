@@ -16,7 +16,7 @@ class ClassicModel extends HTTP {
         wx.setStorageSync(key, res)
         /* 最新一期的期数 index 写入缓存 */
         this._setLatestIndex(res.index)
-        /* 回传回去 */
+        /* 回调函数回传回去 */
         sCallback(res)
       }
     })

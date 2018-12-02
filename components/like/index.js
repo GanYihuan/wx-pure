@@ -20,14 +20,13 @@ Component({
   },
   methods: {
     onLike: function(event) {
-      // console.log(event)
       if (this.properties.readOnly) {
         return
       }
       let like = this.properties.like
       let count = this.properties.count
       count = like ? count - 1 : count + 1
-      /* setData: 修改 data 里面的数据 */
+      /* setData: 修改 data 里面的数据, 数据更新 */
       this.setData({
         count: count,
         like: !like
