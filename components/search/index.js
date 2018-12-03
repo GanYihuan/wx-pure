@@ -41,7 +41,7 @@ Component({
       if (!this.data.q) {
         return
       }
-      if (this._isLocked()) {
+      if (this.isLocked()) {
         return
       }
       let hasMore = this.hasMore()
@@ -49,17 +49,17 @@ Component({
         return
       }
       if (this.hasMore()) {
-        this._locked()
+        this.locked()
         // const length = this.data.dataArray.length
         bookModel.search(this.getCurrentStart(), this.data.q).then(
           res => {
             // const tempArray = this.data.dataArray.concat(res.books)
             this.setMoreData(res.books)
-            this._unLocked()
+            this.unLocked()
           },
           () => {
             /* 断网后避免死锁 */
-            this._unLocked()
+            this.unLocked()
           }
         )
       }
@@ -76,20 +76,6 @@ Component({
       //     })
       //   }
       // })
-    },
-
-    _isLocked() {
-      return this.data.loading ? true : false
-    },
-    _locked() {
-      this.setData({
-        loading: true
-      })
-    },
-    _unLocked() {
-      this.setData({
-        loading: false
-      })
     },
     _closeResult() {
       this.setData({

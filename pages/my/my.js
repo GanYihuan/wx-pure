@@ -11,10 +11,8 @@ Page({
     classics: [],
     myBooksCount: 0
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onShow: function(options) {
+  /* 生命周期函数--监听页面加载 */
+  onShow: function() {
     this.getMyFavor()
     this.hasGottenUserInfo()
     this.getMyBookCount()
@@ -69,12 +67,12 @@ Page({
       url: '/pages/classic-detail/classic-detail?cid=' + event.detail.cid + '&type=' + event.detail.type
     })
   },
-  onJumpToAbout: function(event) {
+  onJumpToAbout: function() {
     wx.navigateTo({
       url: '/pages/about/about'
     })
   },
-  onStudy: function(event) {
+  onStudy: function() {
     wx.navigateTo({
       url: '/pages/course/course'
     })

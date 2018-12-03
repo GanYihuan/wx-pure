@@ -1,5 +1,6 @@
 <view class="container">
   <image class="bg" src="/images/my/my@bg.png"></image>
+  <!-- <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button> -->
   <img-btn-cmp class="avatar-position" wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bind:getuserinfo="onGetUserInfo">
     <image class="avatar" src="/images/my/my.png" slot="img" />
   </img-btn-cmp>
@@ -18,7 +19,7 @@
     </view>
   </view>
   <view class="like-container">
-    <image class=".headline" src="/images/my/like.png" />
+    <image class="headline" src="/images/my/like.png" />
     <view class="preview-container">
       <block wx:for="{{classics}}" wx:key="">
         <previe-cmp class="preview" bind:tap="onPreviewTap" classic="{{item}}" />

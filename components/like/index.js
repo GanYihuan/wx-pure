@@ -1,9 +1,15 @@
 Component({
   /* 组件的属性列表, 需要开放出来的数据 */
   properties: {
-    like: { type: Boolean },
-    count: { type: Number },
-    readOnly: { type: Boolean }
+    like: {
+      type: Boolean
+    },
+    count: {
+      type: Number
+    },
+    readOnly: {
+      type: Boolean
+    }
     // myProperty: {
     //   // [properties](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/component.html)
     // 	type: String, // 类型（必填），目前接受的类型包括：String, Number, Boolean, Object, Array, null（表示任意类型）
