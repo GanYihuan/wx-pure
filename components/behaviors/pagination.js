@@ -1,7 +1,6 @@
 let paginationBev = Behavior({
   properties: {},
   data: {
-    // start: 0,
     count: 20,
     empty: false,
     dataArray: [],
@@ -41,7 +40,6 @@ let paginationBev = Behavior({
       }
     },
     getCurrentStart: function() {
-      // return this.data.start
       return this.data.dataArray.length
     },
     initPagination: function() {
