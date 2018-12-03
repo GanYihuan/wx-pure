@@ -44,6 +44,7 @@ Page({
     //     count: res.fav_nums
     //   })
     // })
+    /* 三个异步都完成后才调用 then */
     Promise.all([detail, comments, likeStatus]).then(res => {
       console.log(res)
       this.setData({

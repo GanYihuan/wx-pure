@@ -10,7 +10,7 @@ Page({
     /* 加载更多 */
     more: false
   },
-  onReachBottom: function(event) {
+  onReachBottom: function() {
     this.setData({
       /* 改成 true, random() 保证 more 的值是变化的 */
       more: random(16)
@@ -73,12 +73,12 @@ Page({
       })
     })
   },
-  onActivateSearch: function(event) {
+  onActivateSearch: function() {
     this.setData({
       searchPanel: true
     })
   },
-  onCancel: function(event) {
+  onCancel: function() {
     this.setData({
       searchPanel: false
     })

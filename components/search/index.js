@@ -77,11 +77,11 @@ Component({
       //   }
       // })
     },
-    onCancel: function(event) {
+    onCancel: function() {
       this.initPagination()
       this.triggerEvent('cancel', {}, {})
     },
-    onDelete: function(event) {
+    onDelete: function() {
       this.initPagination()
       this.setData({
         searching: false,
@@ -94,6 +94,8 @@ Component({
         loadingCenter: true
       })
       // this.initPagination()
+      /* event.detail.value: input 输入的值 */
+      /* event.detail.text: 事件触发定义的值 */
       const q = event.detail.value || event.detail.text
       bookModel.search(0, q).then(res => {
         this.setMoreData(res.books)
