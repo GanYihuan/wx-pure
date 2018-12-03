@@ -10,7 +10,6 @@
   align-items: center;
   padding-top: 40rpx;
   padding-bottom: 40rpx;
-  /* box-shadow:1px 1px 1px #e3e3e3; */
   background-color: #fff;
 }
 
@@ -28,7 +27,6 @@
 .author {
   font-size: 28rpx;
   color: #999;
-  /* margin-bottom: 30rpx; */
 }
 
 .head image {
@@ -52,27 +50,26 @@
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
-  /* z-index: 999; */
   padding: 0 30rpx;
   width: 100%;
 }
 
 .content {
   font-weight: 500;
-  /* font-weight: 300; */
-  /* font-family: PingFangSC; */
   text-indent: 58rpx;
   color: #000;
 }
 
-/* .content::first-letter {
+/* 
+.content::first-letter {
   font-size: 150%;
   font-weight: bold;
   color: #000;
   margin-left:50rpx;
   margin-right:20rpx;
-   float:left; 
-}  */
+  float:left; 
+}  
+*/
 
 .headline {
   /* margin-top:30rpx; */
@@ -125,7 +122,6 @@
   z-index: 999;
   position: fixed;
   bottom: 0;
-  /* width: 690rpx; */
   width: 100%;
   background-color: #fff;
 }
@@ -148,7 +144,6 @@
 }
 
 .share {
-  /* padding:10rpx; */
   width: 40rpx;
   height: 40rpx;
 }
@@ -188,17 +183,25 @@
   color: #aaa;
 }
 
-.comment-container > tag-cmp:first-child view {
+.comment-container > tag-cmp:nth-child(1) view {
   background-color: #fffbdd;
+}
+
+.comment-container > tag-cmp:nth-child(2) view {
+  background-color: #eefbff !important;
 }
 
 .tag {
   margin-right: 15rpx;
   margin-bottom: 10rpx;
-  border-radius: 15px !important;
+  border-radius: 30px !important;
 }
 
-.comment-container > tag-cmp:nth-child(2) view {
+.ex-tag1 {
+  background-color: #fffbdd !important;
+}
+
+.ex-tag2 {
   background-color: #eefbff !important;
 }
 

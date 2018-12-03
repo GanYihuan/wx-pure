@@ -10,7 +10,9 @@
     <text class="shadow" wx:if="{{noComment}}">还没有短评</text>
     <view class="comment-container">
       <block wx:for="{{util.limit(comments,15)}}" wx:key="">
-        <tag-cmp class="tag" text="{{item.content}}">
+        <!-- 对自定义组件应用 css 样式 -->
+        <tag-cmp tag-class="tag" text="{{item.content}}">
+          <!-- 插入到 slot name=after 插槽中 -->
           <text class="num" slot="after">{{'+' + item.nums}}</text>
         </tag-cmp>
       </block>
@@ -18,7 +20,8 @@
   </view>
   <view class="sub-container">
     <text class="headline">内容简介</text>
-    <text decode="{{true}}" class="content">{{util.format(book.summary)}}</text>
+    <!-- decode="{{true}} 解析 &nbsp; -->
+    <text class="content" decode="{{true}}">{{util.format(book.summary)}}</text>
   </view>
   <view class="sub-container">
     <text class="headline">书本信息</text>
@@ -45,7 +48,7 @@
     <text>输入短评</text>
   </view>
   <view class="like-container">
-    <like-cmp bind:like="onLike" class="like" like="{{like}}" count="{{count}}" />
+    <like-cmp class="like" bind:like="onLike" like="{{like}}" count="{{count}}" />
     <img-btn-cmp class="share-btn" open-type="share">
       <image class="share" slot="img" src="/images/icon/share.png" />
     </img-btn-cmp>
@@ -59,17 +62,20 @@
     <text class="cancel" bind:tap="onCancel">取消</text>
   </view>
   <view class="comment-container">
-    <block wx:for="{{util.limit(comments, 3)}}">
+    <block wx:for="{{util.limit(comments, 3)}}" wx:key="">
       <!-- {{index}} -->
-      <tag-cmp bind:tapping="onPost" tag-class="tag" text="{{item.content}}">
+      <!-- <tag-cmp bind:tapping="onPost" tag-class="tag" text="{{item.content}}"> -->
+      <tag-cmp tag-class="{{util.heightlight(index)}}" bind:tapping="onPost" text="{{item.content}}">
         <text class="num" slot="after">{{'+' + item.nums}}</text>
       </tag-cmp>
     </block>
-  </view> 
+  </view>
   <input class="post" focus="{{posting}}" confirm-type="发送" placeholder='短评最多12个字' bind:confirm="onPost"></input>
   <!-- <image class="tip" src="/images/book/tip.png"></image> -->
 </view>
+<!-- <wxs module="util" src="../../utils/filter.wxs"/> -->
 <wxs module="util">
+  /* wxml 写 js, 尽量用 javascript 原生语法 不包含 es6 */
   var limit = function(array, length) {
     return array.slice(0, length)
   }
@@ -81,8 +87,18 @@
     var text = text.replace(reg,'\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
     return text
   }
+  var heightlight = function(index) {
+    if(index == 0) {
+      return 'ex-tag1'
+    }
+    if(index == 1) {
+      return 'ex-tag2'
+    }
+    return ''
+  }
   module.exports = {
     limit: limit,
-    format: format
+    format: format,
+    heightlight: heightlight
   }
 </wxs>

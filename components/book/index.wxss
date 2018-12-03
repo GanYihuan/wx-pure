@@ -1,62 +1,59 @@
 .container {
-	display: flex;
-	flex-direction: column;
-	/* 使其不为 static */
-	position: relative;
-	margin: 30rpx 0 0 0;
-	width: 240rpx;
-	height: 360rpx;
-	box-shadow: 4rpx 4rpx 6rpx #e3e3e3;
+  display: flex;
+  flex-direction: column;
+  /* 使其不为 static, 参考 */
+  position: relative;
+  margin: 30rpx 0 0 0;
+  width: 240rpx;
+  height: 360rpx;
+  box-shadow: 4rpx 4rpx 6rpx #e3e3e3;
 }
 
 .container image {
-	border-radius: 4rpx;
-	width: 100%;
-	height: 100%;
+  border-radius: 4rpx;
+  width: 100%;
+  height: 100%;
 }
 
 .description {
-	display: flex;
-	flex-direction: column;
-	/* 覆盖 位置重叠 */
-	/* 参照元素为 relative 的元素, 不参考 static */
-	position: absolute;
-	bottom: 0;
-	padding: 5rpx 10rpx 8rpx 15rpx;
-	border-bottom-right-radius: 4rpx;
-	border-bottom-left-radius: 4rpx;
-	/* height: 100rpx; */
-	/* 真正宽度要加上 panding border */
-	/* 240rpx - 10prx - 15rpx = 215rpx, 不取奇数, 216rpx */
-	/* width: 100%; */
-	width: 216rpx;
-	font-size: 24rpx;
-	background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  /* 覆盖 位置重叠, 参照元素为 relative 的元素, 不参考 static */
+  position: absolute;
+  bottom: 0;
+  padding: 5rpx 10rpx 8rpx 15rpx;
+  border-bottom-right-radius: 4rpx;
+  border-bottom-left-radius: 4rpx;
+  /* 真正宽度要加上 panding border */
+  /* 240rpx - 10prx - 15rpx = 215rpx, 不取奇数, 216rpx */
+  width: 216rpx;
+  font-size: 24rpx;
+  background-color: #fff;
 }
 
 .title {
-	margin: 10rpx 0 0 0;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	overflow: hidden;
+  margin: 10rpx 0 0 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .author {
-	margin: -5rpx 0 10rpx 0;
-	font-size: 20rpx;
-	color: #999;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	overflow: hidden;
+  margin: -5rpx 0 10rpx 0;
+  font-size: 20rpx;
+  color: #999;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .foot {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-	font-size: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  font-size: 20rpx;
 }
 
 .footer {
-	color: #666;
+  color: #666;
 }

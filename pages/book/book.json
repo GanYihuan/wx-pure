@@ -1,7 +1,7 @@
 {
-	"usingComponents": {
+  "usingComponents": {
     "book-cmp": "/components/book/index",
     "search-cmp": "/components/search/index"
-	},
-	"backgroundColor": "#f5f5f5"
+  },
+  "backgroundColor": "#f5f5f5"
 }

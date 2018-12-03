@@ -1,14 +1,17 @@
-var omit = function(text, length) {
-  // console.log('asfasdfadf')
+var limit = function(array, length) {
+  return array.slice(0, length)
+}
+
+var format = function(text) {
   if (!text) {
-    return ''
+    return
   }
-  // console.log(text.title)
-  var short = text.title.substring(0, length)
-  // console.log(short)
-  return short + '...'
+  var reg = getRegExp('\\\\n', 'g')
+  var text = text.replace(reg, '\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
+  return text
 }
 
 module.exports = {
-  omit: omit
+  format: format,
+  limit: limit
 }

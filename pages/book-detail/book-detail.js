@@ -19,6 +19,8 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function(options) {
+    /* 接受从外部传来的参数 */
+    // const id = options.id
     wx.showLoading()
     /* pages 组件传入的参数在 options 中 */
     const bid = options.bid
@@ -58,7 +60,7 @@ Page({
       posting: true
     })
   },
-  onCancel: function(event) {
+  onCancel: function() {
     this.setData({
       posting: false
     })
@@ -68,6 +70,8 @@ Page({
     likeModel.like(like_or_cancel, this.data.book.id, 400)
   },
   onPost: function(event) {
+    /* event.detail.value: input 输入的值 */
+    /* event.detail.text: 事件触发定义的值 */
     let comment = event.detail.value || event.detail.text
     if (!comment) {
       return
@@ -79,7 +83,7 @@ Page({
       })
       return
     }
-    commentModel.post(this.data.book.id, comment, data => {
+    commentModel.postComment(this.data.book.id, comment).then(res => {
       wx.showToast({
         title: '+ 1',
         icon: 'none'
@@ -92,9 +96,6 @@ Page({
         comments: this.data.comments,
         noComment: false
       })
-    })
-    this.setData({
-      posting: false
     })
   },
   /**

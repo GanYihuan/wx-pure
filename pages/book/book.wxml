@@ -9,6 +9,8 @@
     <view class="sub-container">
       <image class="head-img" src="/images/book/quality.png" />
       <view class="books-container">
+        <!-- wx:for-item: 修改 item 为自定义别名, 默认为 item  -->
+        <!-- block: 包裹循环标签  -->
         <block wx:for="{{books}}" wx:key="id" wx:for-item="itemName">
           <book-cmp class="book" book="{{itemName}}" />
         </block>
