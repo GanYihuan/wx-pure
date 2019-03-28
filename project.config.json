@@ -13,7 +13,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.3.0",
 	"appid": "wxabcaad13aeed9229",
-	"projectname": "imooc-pure",
+	"projectname": "wx-pure",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

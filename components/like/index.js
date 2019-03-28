@@ -1,5 +1,5 @@
 Component({
-  /* 组件的属性列表, 需要开放出来的数据 */
+  // 组件的属性列表, 需要开放出来的数据
   properties: {
     like: {
       type: Boolean
@@ -32,18 +32,12 @@ Component({
       let like = this.properties.like
       let count = this.properties.count
       count = like ? count - 1 : count + 1
-      /* setData: 修改 data 里面的数据, 数据更新 */
-      this.setData({
+      this.setData({ // setData: 修改 data 里面的数据, 数据更新
         count: count,
         like: !like
       })
       let behavior = this.properties.like ? 'like' : 'cancel'
-      /* 
-      triggerEvent: 自定义事件
-      like: 事件名称
-      { behavior: behavior }: 传递参数, 设置 detail
-      */
-      this.triggerEvent(
+      this.triggerEvent( // triggerEvent: 自定义事件 like: 事件名称 { behavior: behavior }: 传递参数, 设置 detail
         'like',
         {
           behavior: behavior
