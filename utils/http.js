@@ -15,8 +15,7 @@ class HTTP {
     if (!params.method) {
       params.method = 'GET'
     }
-    // wx.request: 异步请求
-    wx.request({
+    wx.request({ // wx.request: 异步请求
       url: url,
       data: params.data,
       method: params.method,
@@ -27,21 +26,18 @@ class HTTP {
       success: res => {
         const code = res.statusCode.toString()
         if (code.startsWith('2')) {
-          // params.success 是否为 null, 如果不是则执行后面代码
-          params.success && params.success(res.data)
+          params.success && params.success(res.data) // params.success 是否为 null, 如果不是则执行后面代码
         } else {
           const error_code = res.data.error_code
           this._show_error(error_code)
         }
       },
-      // 没网络时才调用, 4xx 不会调用
-      fail: err => {
+      fail: err => { // 没网络时才调用, 4xx 不会调用
         this._show_error(1)
       }
     })
   }
-  // wechat 没有私有概念, 这里是一种写法
-  _show_error(error_code) {
+  _show_error(error_code) { // wechat 没有私有概念, 这里是一种写法
     if (!error_code) {
       error_code = 1
     }

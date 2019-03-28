@@ -21,7 +21,6 @@
   /* 取消字体上下间距 */
   line-height: 60rpx;
   font-size: 60rpx;
-  /* 取消字体上下间距 */
   font-weight: 800;
 }
 
@@ -41,7 +40,6 @@
   /* 取消字体上下间距 */
   line-height: 24rpx;
   font-size: 24rpx;
-  /* 取消字体上下间距 */
 }
 
 .year {

@@ -5,9 +5,10 @@ class LikeModel extends HTTP {
     super()
   }
   /**
-   * @param behavior {string} 状态
-   * @param artID {Number} 电影 id 号
-   * @param category {string} 状态码
+   * @param {string} behavior 状态
+   * @param {number} artID 电影 id 号
+   * @param {string} category 状态码
+   * @return: success
    */
   like(behavior, artID, category) {
     let url = behavior === 'like' ? 'like' : 'like/cancel'
@@ -25,7 +26,6 @@ class LikeModel extends HTTP {
   }
   getClassicLikeStatus(artID, category, success) {
     this.request({
-      // url: 'classic/' + category + '/' + artID + '/favor',
       url: `classic/${category}/${artID}/favor`,
       success: success
     })
