@@ -1,4 +1,5 @@
 <view class="container tag-class" bind:tap="onTap">
+  <!-- slot 会被 slot=“before” 的 dom 替换 -->
   <slot class="before" name="before"></slot>
   <text>{{text}}</text>
   <slot class="after" name="after"></slot>

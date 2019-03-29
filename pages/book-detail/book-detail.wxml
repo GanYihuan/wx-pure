@@ -12,7 +12,7 @@
       <block wx:for="{{util.limit(comments,15)}}" wx:key="">
         <!-- 对自定义组件应用 css 样式 -->
         <tag-cmp tag-class="tag" text="{{item.content}}">
-          <!-- 插入到 slot name=after 插槽中 -->
+          <!-- 替换 <slot name="before"></slot> 插槽 -->
           <text class="num" slot="after">{{'+' + item.nums}}</text>
         </tag-cmp>
       </block>

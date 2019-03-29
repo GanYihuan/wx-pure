@@ -15,14 +15,10 @@ Page({
     like: false,
     count: 0
   },
-  /**
-   * Lifecycle function--Called when page load
-   */
-  onLoad: function(options) {
-    /* 接受从外部传来的参数 */
-    // const id = options.id
+  onLoad: function(options) { // Lifecycle function--Called when page load
+    // const id = options.id // 接受从外部传来的参数
     wx.showLoading()
-    /* pages 组件传入的参数在 options 中 */
+    // pages 组件传入的参数在 options 中
     const bid = options.bid
     const detail = bookModel.getDetail(bid)
     const comments = bookModel.getComments(bid)
@@ -44,7 +40,7 @@ Page({
     //     count: res.fav_nums
     //   })
     // })
-    /* 三个异步都完成后才调用 then */
+    // Promise.all 三个异步都完成后才调用 then
     Promise.all([detail, comments, likeStatus]).then(res => {
       console.log(res)
       this.setData({
@@ -71,8 +67,8 @@ Page({
     likeModel.like(like_or_cancel, this.data.book.id, 400)
   },
   onPost: function(event) {
-    /* event.detail.value: input 输入的值 */
-    /* event.detail.text: 事件触发定义的值 */
+    // event.detail.value: input 输入的值
+    // event.detail.text: 事件触发定义的值
     let comment = event.detail.value || event.detail.text
     if (!comment) {
       return
@@ -99,8 +95,6 @@ Page({
       })
     })
   },
-  /**
-   * Called when user click on the top right corner to share
-   */
+  // Called when user click on the top right corner to share
   onShareAppMessage: function() {}
 })

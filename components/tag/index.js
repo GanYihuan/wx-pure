@@ -1,10 +1,8 @@
 Component({
   options: {
-    /* 在组件定义时的选项中启用多 slot 支持 */
-    multipleSlots: true
+    multipleSlots: true // 在组件定义时的选项中启用多 slot 支持
   },
-  /* 组件外部传入的样式  */
-  externalClasses: ['tag-class'],
+  externalClasses: ['tag-class'], // 组件外部传入的样式
   properties: {
     text: String
   },

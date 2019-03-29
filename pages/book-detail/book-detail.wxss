@@ -60,15 +60,15 @@
   color: #000;
 }
 
-/* 
+/*
 .content::first-letter {
   font-size: 150%;
   font-weight: bold;
   color: #000;
   margin-left:50rpx;
   margin-right:20rpx;
-  float:left; 
-}  
+  float:left;
+}
 */
 
 .headline {
