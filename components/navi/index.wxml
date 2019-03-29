@@ -1,6 +1,6 @@
 <!--components/navi/navi.wxml-->
 <view class="container">
-  <image 
+  <image
     class="navi-icon navi-left"
     disable="{{!latest}}"
     src="{{latest?disLeftSrc:highLeftSrc}}"

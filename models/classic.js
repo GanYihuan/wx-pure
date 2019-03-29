@@ -68,7 +68,7 @@ class ClassicModel extends HTTP {
     let key = this.prefix + '-' + partKey
     return key
   }
-  // 读取缓存
+  // 读取最新一期的期数缓存
   _getLastIndex(index) {
     let key = this._fullKey('latest-' + index)
     let latestIndex = wx.getStorageSync(key)
