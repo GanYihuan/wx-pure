@@ -3,8 +3,7 @@ import { classicBehavior } from '../classic-beh.js'
 let mMgr = wx.getBackgroundAudioManager()
 
 Component({
-  // 组件的属性列表
-  behaviors: [classicBehavior],
+  behaviors: [classicBehavior], // 组件的属性列表
   properties: {
     src: String,
     title: String
@@ -14,15 +13,12 @@ Component({
     waittingUrl: 'images/player@waitting.png',
     playingUrl: 'images/player@playing.png'
   },
-  // 微信生命周期, 组件进入界面节点树时执行
-  attached: function() {
+  attached: function() { // 微信生命周期, 组件进入界面节点树时执行
     this._recoverPlaying()
     this._monitorSwitch()
   },
-  // hidden 不会触发完整生命周期, 适用于频繁切换
-  // wx:if 会触发完整生命周期, 不大可能改变
-  // 微信生命周期, 组件退出界面节点树时执行
-  // detached: function() {
+  // hidden 不会触发完整生命周期, 适用于频繁切换; wx:if 会触发完整生命周期, 不大可能改变
+  // detached: function() { // 微信生命周期, 组件退出界面节点树时执行
   // 	wx.pauseBackgroundAudio()
   // },
   methods: {

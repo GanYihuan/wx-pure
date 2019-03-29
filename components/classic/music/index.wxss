@@ -9,7 +9,7 @@
   overflow: hidden;
 }
 
-/* 
+/*
 @-webkit-keyframes rotation {
 	from {
 		-webkit-transform: rotate(0deg);
@@ -17,7 +17,7 @@
 	to {
 		-webkit-transform: rotate(360deg);
 	}
-} 
+}
 */
 
 @keyframes rotation {
@@ -56,8 +56,8 @@
 .content {
   display: block;
   margin-top: -90rpx;
-  /* margin:0 auto; */
-  /* width:275px; */
+  /* margin: 0 auto; */
+  /* width: 275px; */
   max-width: 550rpx;
   font-size: 36rpx;
 }
