@@ -5,8 +5,7 @@ class BookModel extends HTTP {
     super()
   }
   getHotList() {
-    /* http-p.js/request({}), 里面写了 {}, 导致能传递对象, (解构赋值) */
-    // return this.request({
+    // return this.request({ // http-p.js/request({}), 里面写了 {}, 导致能传递对象, (解构赋值)
     // 	url: 'book/hot_list',
     // 	data: {
     // 		name: '1',

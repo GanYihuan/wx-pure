@@ -7,15 +7,12 @@ const tips = {
 }
 
 class HTTP {
-  /* 解构 {} */
-  request({ url, data = {}, method = 'GET' }) {
+  request({ url, data = {}, method = 'GET' }) { // 解构 {}
     return new Promise((resolve, reject) => {
-      /* 必填参数在默认参数之前 */
-      this._request(url, resolve, reject, data, method)
+      this._request(url, resolve, reject, data, method) // 必填参数在默认参数之前
     })
   }
-  /* 必填参数在默认参数前 */
-  _request(url, resolve, reject, data = {}, method = 'GET') {
+  _request(url, resolve, reject, data = {}, method = 'GET') { // 必填参数在默认参数前
     wx.request({
       url: config.api_blink_url + url,
       data: data,
@@ -25,8 +22,7 @@ class HTTP {
         appkey: config.appkey
       },
       success: res => {
-        /* 判断以2（2xx)开头的状态码为正确 */
-        const code = res.statusCode.toString()
+        const code = res.statusCode.toString() // 判断以2（2xx)开头的状态码为正确
         if (code.startsWith('2')) {
           resolve(res.data)
         } else {
@@ -35,8 +31,7 @@ class HTTP {
           this._show_error(error_code)
         }
       },
-      /* 没网络时才调用 */
-      fail: err => {
+      fail: err => { // 没网络时才调用
         reject()
         this._show_error(1)
       }
