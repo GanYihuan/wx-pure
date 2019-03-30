@@ -19,14 +19,12 @@ Component({
     historyWords: [],
     hotKeys: [],
     q: '',
-    /* 锁, 防止多次无用的加载 */
-    loading: false,
+    loading: false, // 锁, 防止多次无用的加载
     loadingCenter: false,
     // dataArray: [],
     searching: false
   },
-  /* 组件初始化调用 */
-  attached: function() {
+  attached: function() { // 组件初始化调用
     this.setData({
       historyWords: keyModel.getHistory()
     })
@@ -58,8 +56,7 @@ Component({
             this.unLocked()
           },
           () => {
-            /* 断网后避免死锁 */
-            this.unLocked()
+            this.unLocked() // 断网后避免死锁
           }
         )
       }
@@ -94,9 +91,7 @@ Component({
     onConfirm: function(event) {
       this._showResult()
       this._showLoadingCenter()
-      /* event.detail.value: input 输入的值 */
-      /* event.detail.text: 事件触发定义的值 */
-      const q = event.detail.value || event.detail.text
+      const q = event.detail.value || event.detail.text // event.detail.value: input 输入的值, event.detail.text: 事件触发定义的值
       this.setData({
         q: q
       })

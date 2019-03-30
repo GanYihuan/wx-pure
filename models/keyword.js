@@ -15,8 +15,7 @@ class KeywordModel extends HTTP {
       url: '/book/hot_keyword'
     })
   }
-  /* 关键字写入缓存中 */
-  addToHistory(word) {
+  addToHistory(word) { // 关键字写入缓存中
     let keywords = this.getHistory()
     // const has = keywords.inlcludes(word)
     let index = keywords.indexOf(word)
