@@ -22,8 +22,7 @@ Component({
   },
   methods: {
     onTap: function() {
-      // 注意 catchtap 与 bindtap 的区别
-      this.triggerEvent(
+      this.triggerEvent( // 注意 catchtap 与 bindtap 的区别
         'tap',
         {
           cid: this.properties.classic.id,

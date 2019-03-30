@@ -11,8 +11,7 @@ Page({
     classics: [],
     myBooksCount: 0
   },
-  /* 生命周期函数--监听页面加载 */
-  onShow: function() {
+  onShow: function() { // 生命周期函数--监听页面加载
     this.getMyFavor()
     this.hasGottenUserInfo()
     this.getMyBookCount()
@@ -25,11 +24,9 @@ Page({
     })
   },
   hasGottenUserInfo: function() {
-    /* 获取用户的当前设置 */
-    wx.getSetting({
+    wx.getSetting({ // 获取用户的当前设置
       success: data => {
-        /* 如果用户已经授权 */
-        if (data.authSetting['scope.userInfo']) {
+        if (data.authSetting['scope.userInfo']) { // 如果用户已经授权
           wx.getUserInfo({
             success: data => {
               this.setData({
