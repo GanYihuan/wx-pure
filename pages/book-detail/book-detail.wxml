@@ -75,7 +75,7 @@
 </view>
 <!-- <wxs module="util" src="../../utils/filter.wxs"/> -->
 <wxs module="util">
-  /* wxml 写 js, 尽量用 javascript 原生语法 不包含 es6 */
+  // wxml 写 js, 尽量用 javascript 原生语法 不能用 es6 语法
   var limit = function(array, length) {
     return array.slice(0, length)
   }

@@ -2,6 +2,7 @@ var limit = function(array, length) {
   return array.slice(0, length)
 }
 
+// 不能用 const, wxs 不能用 es6 语法
 var format = function(text) {
   if (!text) {
     return
