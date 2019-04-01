@@ -1,6 +1,5 @@
 Component({
-  // 组件的属性列表, 需要开放出来的数据
-  properties: {
+  properties: { // 组件的属性列表, 需要开放出来的数据
     like: {
       type: Boolean
     },
