@@ -12,8 +12,7 @@ Page({
     likeStatus: false,
     likeCount: 0
   },
-  // 生命周期函数--监听页面加载
-  onLoad: function(options) {
+  onLoad: function(options) { // 生命周期函数--监听页面加载
     // wx.request: 异步请求
     // wx.request({
     // 	url: 'http://bl.7yue.pro/v1/classic/latest',

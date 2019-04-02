@@ -42,8 +42,7 @@ class HTTP {
       error_code = 1
     }
     const tip = tips[error_code]
-    // [wx.showToast](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showToast.html)
-    wx.showToast({
+    wx.showToast({ // [wx.showToast](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showToast.html)
       title: tip ? tip : tips[1],
       icon: 'none',
       duration: 2000
