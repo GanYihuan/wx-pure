@@ -16,9 +16,9 @@
   height: 50px;
 }
 
-.like {
-  margin-right: 30rpx;
-  margin-top: 12rpx;
+.epsoide {
+  margin-left: 10px;
+  margin-top: 7px;
 }
 
 .like-container {
@@ -27,6 +27,11 @@
   justify-content: space-between;
   align-items: center;
   margin-right: 30rpx;
+}
+
+.like {
+  margin-right: 30rpx;
+  margin-top: 12rpx;
 }
 
 .share-btn {
@@ -43,9 +48,4 @@
 .navi {
   position: absolute;
   bottom: 40rpx;
-}
-
-.epsoide {
-  margin-left: 10px;
-  margin-top: 7px;
 }
