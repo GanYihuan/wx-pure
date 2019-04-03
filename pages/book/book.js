@@ -49,11 +49,13 @@ Page({
     // 		console.log(res) // res -> api3 结果
     // 	})
 
-    bookModel.getHotList().then(res => {
-      this.setData({
-        books: res
+    bookModel
+      .getHotList()
+      .then(res => {
+        this.setData({
+          books: res
+        })
       })
-    })
   },
   onActivateSearch: function() {
     this.setData({
