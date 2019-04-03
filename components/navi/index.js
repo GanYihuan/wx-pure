@@ -4,12 +4,12 @@ Component({
       type: String,
       value: '...'
     },
-    latest: {
+    latest: { // 最后一期期刊
       type: Boolean,
       value: false,
       observer: function() {}
     },
-    first: {
+    first: { // 第一期期刊
       type: Boolean,
       value: false,
       observer: function() {}

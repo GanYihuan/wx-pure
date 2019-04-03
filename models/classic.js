@@ -13,7 +13,7 @@ class ClassicModel extends HTTP {
       success: res => {
         let key = this._fullKey(res.index)
         wx.setStorageSync(key, res)
-        this._setLatestIndex(res.index)
+        this._setLatestIndex(res.index) // lastestClassic save to storage
         // 回调函数回传回去
         sCallback(res)
       }
@@ -59,14 +59,14 @@ class ClassicModel extends HTTP {
     let latestIndex = this._getLastIndex(index)
     return latestIndex === index ? true : false
   }
+  _fullKey(partKey) {
+    let key = this.prefix + '-' + partKey
+    return key
+  }
   // 在缓存中存放最新一期的期数 index
   _setLatestIndex(index) {
     let key = this._fullKey('latest-' + index)
     wx.setStorageSync(key, index)
-  }
-  _fullKey(partKey) {
-    let key = this.prefix + '-' + partKey
-    return key
   }
   // 读取最新一期的期数缓存
   _getLastIndex(index) {
