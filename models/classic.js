@@ -5,8 +5,7 @@ class ClassicModel extends HTTP {
   constructor() {
     super()
   }
-  // 获取最新的期刊
-  getLatest(sCallback) {
+  getLatest(sCallback) { // 获取最新的期刊
     // this.request() 是 async, 不能 return 结果
     this.request({
       url: 'classic/latest',
@@ -14,8 +13,7 @@ class ClassicModel extends HTTP {
         let key = this._fullKey(res.index)
         wx.setStorageSync(key, res)
         this._setLatestIndex(res.index) // lastestClassic save to storage
-        // 回调函数回传回去
-        sCallback(res)
+        sCallback(res) // 回调函数回传回去
       }
     })
   }
@@ -26,8 +24,7 @@ class ClassicModel extends HTTP {
     }
     this.request(params)
   }
-  // 获取下一期或者上一期期刊
-  getClassic(index, next_or_previous, sCallback) {
+  getClassic(index, next_or_previous, sCallback) { // 获取下一期或者上一期期刊
     let key = next_or_previous === 'next' ? this._fullKey(index + 1) : this._fullKey(index - 1)
     let classic = wx.getStorageSync(key)
     if (!classic) {
@@ -50,26 +47,22 @@ class ClassicModel extends HTTP {
     }
     this.request(params)
   }
-  // 是否是最新一期期刊
-  isFirst(index) {
+  isFirst(index) { // 是否是最新一期期刊
     return index === 1 ? true : false
   }
-  // 是否是最后一期期刊
-  isLatest(index) {
-    let latestIndex = this._getLastIndex(index)
+  isLatest(index) { // 是否是最后一期期刊
+    let latestIndex = this._getLastIndex(index) // lastestClassic get from storage
     return latestIndex === index ? true : false
   }
   _fullKey(partKey) {
     let key = this.prefix + '-' + partKey
     return key
   }
-  // 在缓存中存放最新一期的期数 index
-  _setLatestIndex(index) {
+  _setLatestIndex(index) { // 在缓存中存放最新一期的期数 index
     let key = this._fullKey('latest-' + index)
     wx.setStorageSync(key, index)
   }
-  // 读取最新一期的期数缓存
-  _getLastIndex(index) {
+  _getLastIndex(index) { // 读取最新一期的期数缓存
     let key = this._fullKey('latest-' + index)
     let latestIndex = wx.getStorageSync(key)
     return latestIndex
