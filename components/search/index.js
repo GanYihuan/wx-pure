@@ -28,11 +28,13 @@ Component({
     this.setData({
       historyWords: keyModel.getHistory()
     })
-    keyModel.getHot().then(res => {
-      this.setData({
-        hotKeys: res.hot
+    keyModel
+      .getHot()
+      .then(res => {
+        this.setData({
+          hotKeys: res.hot
+        })
       })
-    })
   },
   methods: {
     loadMore: function() {
@@ -95,12 +97,14 @@ Component({
       this.setData({
         q: q
       })
-      bookModel.search(0, q).then(res => {
-        this.setMoreData(res.books)
-        this.setTotal(res.total)
-        keyModel.addToHistory(q)
-        this._hideLoadingCenter()
-      })
+      bookModel
+        .search(0, q)
+        .then(res => {
+          this.setMoreData(res.books)
+          this.setTotal(res.total)
+          keyModel.addToHistory(q)
+          this._hideLoadingCenter()
+        })
       // http.request({
       //   url: 'book/search?summary=1',
       //   data: {
