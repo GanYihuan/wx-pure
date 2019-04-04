@@ -79,20 +79,22 @@ Page({
       })
       return
     }
-    commentModel.postComment(this.data.book.id, comment).then(res => {
-      wx.showToast({
-        title: '+ 1',
-        icon: 'none'
+    commentModel
+      .postComment(this.data.book.id, comment)
+      .then(res => {
+        wx.showToast({
+          title: '+ 1',
+          icon: 'none'
+        })
+        this.data.comments.unshift({
+          content: comment,
+          nums: 1
+        })
+        this.setData({
+          comments: this.data.comments,
+          noComment: false
+        })
       })
-      this.data.comments.unshift({
-        content: comment,
-        nums: 1
-      })
-      this.setData({
-        comments: this.data.comments,
-        noComment: false
-      })
-    })
   },
   // Called when user click on the top right corner to share
   onShareAppMessage: function() {}
