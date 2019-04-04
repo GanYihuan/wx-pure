@@ -51,16 +51,17 @@ Component({
       if (this.hasMore()) {
         this.locked()
         // const length = this.data.dataArray.length
-        bookModel.search(this.getCurrentStart(), this.data.q).then(
-          res => {
-            // const tempArray = this.data.dataArray.concat(res.books)
-            this.setMoreData(res.books)
-            this.unLocked()
-          },
-          () => {
-            this.unLocked() // 断网后避免死锁
-          }
-        )
+        bookModel
+          .search(this.getCurrentStart(), this.data.q)
+          .then(res => {
+              // const tempArray = this.data.dataArray.concat(res.books)
+              this.setMoreData(res.books)
+              this.unLocked()
+            },
+            () => {
+              this.unLocked() // 断网后避免死锁
+            }
+          )
       }
       // http.request({
       //   url: 'book/search?summary=1',
