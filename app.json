@@ -16,7 +16,7 @@
     "navigationStyle": "default"
   },
   "tabBar": {
-    "borderStyle": "#000",
+    "borderStyle": "black",
     "selectedColor": "#000",
     "backgroundColor": "#fff",
     "color": "#c7c7c7",
@@ -40,5 +40,6 @@
         "text": "喜欢"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
