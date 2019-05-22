@@ -1,6 +1,6 @@
 import { classicBehavior } from '../classic-beh.js'
 
-let mMgr = wx.getBackgroundAudioManager()
+let mMgr = wx.getBackgroundAudioManager() // 音乐对象
 
 Component({
   behaviors: [classicBehavior], // 组件的属性列表
