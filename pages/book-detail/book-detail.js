@@ -41,7 +41,7 @@ Page({
     //   })
     // })
     Promise.all([detail, comments, likeStatus]).then(res => { // Promise.all 三个异步都完成后才调用 then
-      console.log(res)
+      // console.log(res)
       this.setData({
         book: res[0],
         comments: res[1].comments,
