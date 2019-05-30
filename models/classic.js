@@ -6,7 +6,7 @@ class ClassicModel extends HTTP {
     super()
   }
   getLatest(sCallback) { // 获取最新的期刊, 也就是最大的期刊号，可看作是最后一期期刊
-    // this.request() 是 async, 不能 return 结果
+    // this.request() is async, can't return res, invoked HTTP request()
     this.request({
       url: 'classic/latest',
       success: res => {

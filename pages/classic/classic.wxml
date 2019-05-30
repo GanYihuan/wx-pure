@@ -2,7 +2,7 @@
   <view class='header'>
     <epsoide-cmp class="epsoide" index="{{classic.index}}" />
     <view class="like-container">
-      <like-cmp bind:like="onLike" class="like" like="{{like}}" count="{{count}}" />
+      <like-cmp class="like" bind:like="onLike" like="{{like}}" count="{{count}}" />
       <img-btn-cmp class="share-btn" open-type="share">
         <image class="share" slot="img" src="/images/icon/share.png" />
       </img-btn-cmp>

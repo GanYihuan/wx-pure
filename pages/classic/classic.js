@@ -32,7 +32,7 @@ Page({
     classicModel.getLatest(res => {
       console.log(res)
       // this._getLikeStatus(res.id, res.type)
-      this.setData({ // setData: 修改 data 里面的数据, 数据更新
+      this.setData({ // setData: modify data inside data, data update
         classic: res,
         likeCount: res.fav_nums,
         likeStatus: res.like_status
