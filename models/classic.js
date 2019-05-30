@@ -62,7 +62,7 @@ class ClassicModel extends HTTP {
     let key = this._fullKey('latest-' + index)
     wx.setStorageSync(key, index)
   }
-  _getLastIndex(index) { // 读取 latest- 缓存
+  _getLastIndex(index) { // 读取 latest- 缓存, 获取 index
     let key = this._fullKey('latest-' + index)
     let latestIndex = wx.getStorageSync(key)
     return latestIndex

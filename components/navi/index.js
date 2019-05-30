@@ -4,7 +4,7 @@ Component({
       type: String,
       value: '...'
     },
-    latest: { // 最后一期期刊
+    latest: { // 最后一期期刊, 即使最新一期期刊
       type: Boolean,
       value: false,
       observer: function() {}
