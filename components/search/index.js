@@ -24,7 +24,7 @@ Component({
     // dataArray: [],
     searching: false
   },
-  attached: function() { // 组件初始化调用
+  attached: function() { // 组件进入界面 节点树时执行
     this.setData({
       historyWords: keyModel.getHistory()
     })
