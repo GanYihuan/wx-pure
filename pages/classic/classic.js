@@ -12,14 +12,14 @@ Page({
     likeStatus: false,
     likeCount: 0
   },
-  onLoad: function(options) { // 生命周期函数--监听页面加载
-    // wx.request: 异步请求
+  onLoad: function(options) { // Lifecycle function--listening page load
+    // wx.request: async request
     // wx.request({
     // 	url: 'http://bl.7yue.pro/v1/classic/latest',
     // 	header: {
     // 		appkey: 'GgRhTjUNUYn1fHke'
     // 	},
-    //  // success: 接收异步调用的结果 res, this 指向
+    //  success: Receive the result of an asynchronous call res, this direction
     // 	success: (res) => {
     //    console.log(res)
     //    console.log(this.data.likeCount)

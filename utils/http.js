@@ -15,7 +15,7 @@ class HTTP {
     if (!params.method) {
       params.method = 'GET'
     }
-    wx.request({ // wx.request: 异步请求
+    wx.request({ // wx.request: async request
       url: url,
       data: params.data,
       method: params.method,
@@ -32,12 +32,12 @@ class HTTP {
           this._show_error(error_code)
         }
       },
-      fail: err => { // 没网络时才调用, 4xx 不会调用
+      fail: err => { // no network invoked, 4xx not invoked
         this._show_error(1)
       }
     })
   }
-  _show_error(error_code) { // wechat 没有私有概念, 这里是一种写法
+  _show_error(error_code) { // wechat no private, just a mark
     if (!error_code) {
       error_code = 1
     }
