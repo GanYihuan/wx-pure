@@ -30,7 +30,7 @@ Page({
     // 使用回调函数剥夺了 return 能力也, 就不能赋值操作, promise 能解决且带有 return 能力, 回调函数能获取值 let a = ...
     // classicModel.getClassic() 是异步，不能用同步方式调用, 里面没有 return, let latest = classicModel.getClassic()
     classicModel.getLatest(res => {
-      console.log(res)
+      // console.log(res)
       // this._getLikeStatus(res.id, res.type)
       this.setData({ // setData: modify data inside data, data update
         classic: res,
