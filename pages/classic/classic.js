@@ -1,7 +1,7 @@
 import { ClassicModel } from '../../models/classic.js'
 import { LikeModel } from '../../models/like.js'
 
-let classicModel = new ClassicModel() // 实例化对象
+let classicModel = new ClassicModel() // Instantiated object
 let likeModel = new LikeModel()
 
 Page({
@@ -13,14 +13,12 @@ Page({
     likeCount: 0
   },
   onLoad: function(options) { // Lifecycle function--listening page load
-    // wx.request: async request
-    // wx.request({
+    // wx.request({ // async request
     // 	url: 'http://bl.7yue.pro/v1/classic/latest',
     // 	header: {
     // 		appkey: 'GgRhTjUNUYn1fHke'
     // 	},
-    //  success: Receive the result of an asynchronous call res, this direction
-    // 	success: (res) => {
+    // 	success: (res) => { // Receive the result of an asyn call res
     //    console.log(res)
     //    console.log(this.data.likeCount)
     // 		console.log(this.res.count)

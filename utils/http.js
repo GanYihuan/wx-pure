@@ -23,7 +23,7 @@ class HTTP {
         'content-type': 'application/json',
         appkey: config.appkey
       },
-      success: res => {
+      success: res => { // Receive the result of an asyn call res
         const code = res.statusCode.toString()
         if (code.startsWith('2')) {
           params.success && params.success(res.data) // params.success 是否为 null, 如果不是则执行后面代码
@@ -37,12 +37,12 @@ class HTTP {
       }
     })
   }
-  _show_error(error_code) { // wechat no private, just a mark
+  _show_error(error_code) { // wechat no private
     if (!error_code) {
       error_code = 1
     }
     const tip = tips[error_code]
-    wx.showToast({ // [wx.showToast](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showToast.html)
+    wx.showToast({
       title: tip ? tip : tips[1],
       icon: 'none',
       duration: 2000
