@@ -10,9 +10,9 @@ class ClassicModel extends HTTP {
     this.request({
       url: 'classic/latest',
       success: res => {
-        let key = this._fullKey(res.index)
-        wx.setStorageSync(key, res) // 缓存该期内容
-        this._setLatestIndex(res.index) // 缓存该期刊号，用来判断是否是最后一期期刊
+        let key = this._fullKey(res.index) // key 值加盐，用来定义名字
+        wx.setStorageSync(key, res) // 缓存内容
+        this._setLatestIndex(res.index) // 缓存刊号，用来判断是否是最后一期期刊
         sCallback(res) // 回调函数回传回去
       }
     })
@@ -51,18 +51,18 @@ class ClassicModel extends HTTP {
     return index === 1 ? true : false
   }
   isLatest(index) { // 是否是最后一期期刊
-    let latestIndex = this._getLastIndex(index) // lastestClassic get from storage
+    let latestIndex = this._getLastIndex(index)
     return latestIndex === index ? true : false
   }
   _fullKey(partKey) { // key 值加盐，用来定义名字
     let key = this.prefix + '-' + partKey
     return key
   }
-  _setLatestIndex(index) { // 缓存 latest-
+  _setLatestIndex(index) { // 缓存 latest 刊号
     let key = this._fullKey('latest-' + index)
     wx.setStorageSync(key, index)
   }
-  _getLastIndex(index) { // 读取 latest- 缓存, 获取 index
+  _getLastIndex(index) { // 读取 latest 刊号缓存, 获取刊号
     let key = this._fullKey('latest-' + index)
     let latestIndex = wx.getStorageSync(key)
     return latestIndex

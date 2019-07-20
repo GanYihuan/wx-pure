@@ -7,10 +7,10 @@ let likeModel = new LikeModel()
 Page({
   data: {
     classic: null,
-    first: false,
-    latest: true,
+    likeCount: 0,
     likeStatus: false,
-    likeCount: 0
+    first: false,
+    latest: true
   },
   onLoad: function(options) { // Lifecycle function--listening page load
     // wx.request({ // async request

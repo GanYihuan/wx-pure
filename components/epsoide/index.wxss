@@ -1,15 +1,13 @@
 .container {
   display: inline-flex;
   flex-direction: row;
-  /* 根据最高元素 08 font-size 设置 */
-  height: 60rpx;
+  height: 60rpx; /* 根据最高元素 08 font-size 设置 */
 }
 
 .index-container {
   display: flex;
   flex-direction: row;
-  /* No 08 | 基于底部对齐 */
-  align-items: baseline;
+  align-items: baseline; /* No 08 | 基于底部对齐 */
 }
 
 .plain {
@@ -18,9 +16,8 @@
 
 .index {
   margin: 0 14rpx 0 0;
-  /* 取消字体上下间距 */
-  line-height: 60rpx;
-  font-size: 60rpx;
+  line-height: 60rpx; /* 取消字体上下间距 */
+  font-size: 60rpx; /* 取消字体上下间距 */
   font-weight: 800;
 }
 
@@ -37,7 +34,6 @@
 }
 
 .month {
-  /* 取消字体上下间距 */
   line-height: 24rpx;
   font-size: 24rpx;
 }
