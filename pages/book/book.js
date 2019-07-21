@@ -25,6 +25,7 @@ Page({
     // 		}
     // 	})
     // })
+
     // promise.then( // then(): 拿到异步执行后的结果状态
     // 	res => {
     // 		console.log(res + ' success!')

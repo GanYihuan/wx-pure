@@ -16,10 +16,9 @@ Page({
     count: 0
   },
   onLoad: function(options) { // Lifecycle function--Called when page load
-    // const id = options.id // 接受从外部传来的参数
     wx.showLoading()
     // pages 组件传入的参数在 options 中
-    const bid = options.bid
+    const bid = options.bid // 接受从外部传来的参数
     const detail = bookModel.getDetail(bid)
     const comments = bookModel.getComments(bid)
     const likeStatus = bookModel.getLikeStatus(bid)
