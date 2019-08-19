@@ -1,5 +1,13 @@
+/*
+ * @Description:
+ * @version:
+ * @Author: GanEhank
+ * @Date: 2018-07-07 19:53:30
+ * @LastEditors: GanEhank
+ * @LastEditTime: 2019-08-20 01:32:33
+ */
 Component({
- properties:  { // 组件的属性列表, 需要开放出来的数据
+  properties:  { // 组件的属性列表, 需要开放出来的数据
     like: {
       type: Boolean
     },
